@@ -99,7 +99,7 @@ INSERT INTO `m_goods` (`m_goods_id`, `m_account_id`, `m_goods_type`, `m_goods_na
 
 -- --------------------------------------------------------
 --
--- Table structure for table `m_account`
+-- Table structure for table `m_card`
 --
 
 DROP TABLE IF EXISTS `m_card`;
@@ -118,7 +118,7 @@ CREATE TABLE `m_card` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_account`
+-- Dumping data for table `m_card`
 --
 INSERT INTO `m_card` (`m_card_id`, `m_account_id`, `m_card_fname`,`m_card_lname`, `m_card_location`, `m_card_postal`, `m_card_number`,`m_card_expire`, `m_card_cvv`) VALUES
 (1, 1, 'first', 'user', 'Halifax', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
