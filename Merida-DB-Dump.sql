@@ -108,7 +108,9 @@ CREATE TABLE `m_card` (
   `m_account_id` int(11) NOT NULL,
   `m_card_fname` varchar(128) NOT NULL,
   `m_card_lname` varchar(128) NOT NULL,
-  `m_card_location` varchar(32) NOT NULL,
+  `m_card_country` varchar(128) NOT NULL,
+   `m_card_city` varchar(128) NOT NULL,
+  `m_card_province` varchar(128) NOT NULL,
   `m_card_postal` varchar(128) NOT NULL,
   `m_card_number` varchar(128) NOT NULL,
   `m_card_expire` DATE NOT NULL,
@@ -120,10 +122,10 @@ CREATE TABLE `m_card` (
 --
 -- Dumping data for table `m_account`
 --
-INSERT INTO `m_card` (`m_card_id`, `m_account_id`, `m_card_fname`,`m_card_lname`, `m_card_location`, `m_card_postal`, `m_card_number`,`m_card_expire`, `m_card_cvv`) VALUES
-(1, 1, 'first', 'user', 'Halifax', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
-(2, 2, 'second', 'user', 'Halifax', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
-(3, 3, 'third', 'user', 'Halifax', 'A0A-0A0', '0000-1111-2222-3333', '2024-01-01', '111'),
-(4, 4, 'fourth', 'user', 'Dartmouth', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111');
+INSERT INTO `m_card` (`m_card_id`, `m_account_id`, `m_card_fname`,`m_card_lname`, `m_card_country`, `m_card_city`, `m_card_province`, `m_card_postal`, `m_card_number`,`m_card_expire`, `m_card_cvv`) VALUES
+(1, 1, 'first', 'user', 'Canada','Halifax','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
+(2, 2, 'second', 'user', 'Canada','Halifax','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
+(3, 3, 'third', 'user', 'Canada','Halifax','Nova Scotia', 'A0A-0A0', '0000-1111-2222-3333', '2024-01-01', '111'),
+(4, 4, 'fourth', 'user', 'Canada','Dartmouth','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111');
 
 
