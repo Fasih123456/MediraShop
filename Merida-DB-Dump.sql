@@ -99,7 +99,7 @@ INSERT INTO `m_goods` (`m_goods_id`, `m_account_id`, `m_goods_type`, `m_goods_na
 
 -- --------------------------------------------------------
 --
--- Table structure for table `m_card`
+-- Table structure for table `m_account`
 --
 
 DROP TABLE IF EXISTS `m_card`;
@@ -108,6 +108,7 @@ CREATE TABLE `m_card` (
   `m_account_id` int(11) NOT NULL,
   `m_card_fname` varchar(128) NOT NULL,
   `m_card_lname` varchar(128) NOT NULL,
+  `m_card_address` varchar(128) NOT NULL,
   `m_card_country` varchar(128) NOT NULL,
    `m_card_city` varchar(128) NOT NULL,
   `m_card_province` varchar(128) NOT NULL,
@@ -120,12 +121,12 @@ CREATE TABLE `m_card` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `m_card`
+-- Dumping data for table `m_account`
 --
-INSERT INTO `m_card` (`m_card_id`, `m_account_id`, `m_card_fname`,`m_card_lname`, `m_card_country`, `m_card_city`, `m_card_province`, `m_card_postal`, `m_card_number`,`m_card_expire`, `m_card_cvv`) VALUES
-(1, 1, 'first', 'user', 'Canada','Halifax','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
-(2, 2, 'second', 'user', 'Canada','Halifax','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
-(3, 3, 'third', 'user', 'Canada','Halifax','Nova Scotia', 'A0A-0A0', '0000-1111-2222-3333', '2024-01-01', '111'),
-(4, 4, 'fourth', 'user', 'Canada','Dartmouth','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111');
+INSERT INTO `m_card` (`m_card_id`, `m_account_id`, `m_card_fname`,`m_card_lname`, `m_card_address`,`m_card_country`, `m_card_city`, `m_card_province`, `m_card_postal`, `m_card_number`,`m_card_expire`, `m_card_cvv`) VALUES
+(1, 1, 'first', 'user', '123 Street', 'Canada','Halifax','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
+(2, 2, 'second', 'user', '123 Street', 'Canada','Halifax','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111'),
+(3, 3, 'third', 'user', '123 Street', 'Canada','Halifax','Nova Scotia', 'A0A-0A0', '0000-1111-2222-3333', '2024-01-01', '111'),
+(4, 4, 'fourth', 'user', '123 Street', 'Canada','Dartmouth','Nova Scotia', 'A0A-0A0','0000-1111-2222-3333', '2024-01-01', '111');
 
 
