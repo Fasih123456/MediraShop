@@ -13,14 +13,19 @@
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
 
-        echo "<section class='profile'>" . PHP_EOL;
-        echo "<p class='fixed-text'>" . "Name"  . "</p>" . "<p>" . $row["m_account_fname"] . " " . $row["m_account_lname"] . "</p>" . PHP_EOL;
-        echo "<p class='fixed-text'>" . "Location"  . "</p>" . "<p>" . $row["m_account_location"] . "</p>" . PHP_EOL;
-        echo "</section>" . PHP_EOL;
+        $_SESSION["fname"] = $row["m_account_fname"];
+        $_SESSION["lname"] = $row["m_account_lname"];
+        $_SESSION["location"] = $row["m_account_location"];
 
-        echo "<button>Orders</button>";
-        echo "<button>Buy Again</button>";
-        echo "<button>Cart</button>";
-    
 
+        $value1 = $_SESSION["fname"];
+        $value2 = $_SESSION["fname"];
+        $value3 = $_SESSION["location"];
 ?>
+
+        <form action="includes/profile-edit.php" method="POST">
+            <div><label>Name : <input type="text" value="<?php echo $value1 . " " . $value2?>"></label></div>
+            <div><label>Location : <input type="text" value="<?php echo $value3?>"></label></div>
+        
+            <input type="submit" name="submit" value="edit">
+        </form>

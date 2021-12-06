@@ -13,7 +13,6 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
     $result = $conn->query($sql);
 
     if ($result->num_rows == 0) {
-
         echo "<p>Incorrect username or password.</p>";
     } else {
         $row = $result->fetch_assoc();
@@ -22,7 +21,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
             $_SESSION["email"] = $email;
             $_SESSION["id"] = $row["m_id"];
             $_SESSION['value'] = 0;
-
+            //first name,location and last name are also available in another file as session values.
             header("Location: index.php");
             die;
         }else{
