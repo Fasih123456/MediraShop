@@ -1,10 +1,10 @@
 
 <?php
-	require_once "includes/header.php";
+require_once "includes/header.php";
 
-	require_once "includes/functions.php";
+require_once "includes/functions.php";
 
-	require_once "includes/db.php"
+require_once "includes/db.php"
 ?>
 <div class='main-banner' id='top'>
 
@@ -30,13 +30,13 @@
         if ($countSearch == 0) {
             echo "<p> Nothing Found!</p>";
         } else{
-           $sql= "SELECT * FROM m_goods WHERE m_goods_name LIKE '%$search_value%'";
-           $result = $conn->query($sql);
+            $sql= "SELECT * FROM m_goods WHERE m_goods_name LIKE '%$search_value%'";
+            $result = $conn->query($sql);
 
             while ($row = $result->fetch_row()) {
 
 
-           echo "<div class='container'>
+                echo "<div class='container'>
                     <div class='row'>
                             <div class='col-lg-4'>
                                     <div class='item'>
@@ -63,7 +63,7 @@
                                     </div>
                             </div>
                             </div>";
-          }
+            }
 
         }
 
@@ -77,15 +77,15 @@
 <?php
 
 if(isset($_GET['login'])){
-	include "includes/login.php";
+    include "includes/login.php";
 }
 
 if(isset($_GET['register'])){
-	include "includes/register.php";
+    include "includes/register.php";
 }
 
 if(isset($_GET['profile'])){
-	include "includes/profile.php";
+    include "includes/profile.php";
 }
-	require_once "includes/footer.php";
+require_once "includes/footer.php";
 ?>
