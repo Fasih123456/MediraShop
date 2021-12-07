@@ -27,17 +27,17 @@ if(isset($_GET['profile'])){
 
 
 if (isset($_POST['search'])) {
-	$search_value=$_GET["search"];
+	$search_value=$_POST["search"];
 	$searchQuery = "SELECT COUNT(*) as itemCheck FROM m_goods WHERE m_goods_name LIKE %'".$search_value."%'";
-	$searchResult = mysqli_query($dbconn,$searchQuery);
+	$searchResult = mysqli_query($conn,$searchQuery);
 
 	//For debugging
 	if (!$searchResult) {
-	printf("Error: %s\n", mysqli_error($dbconn));
+	printf("Error: %s\n", mysqli_error($conn));
 	exit();
 	}
 
-	$searchRow = mysqli_fetch_array($result);
+	$searchRow = mysqli_fetch_array($searchResult);
 
 	$countSearch = $searchRow['itemCheck'];
 
@@ -45,10 +45,10 @@ if (isset($_POST['search'])) {
 		echo "<p> Nothing Found!</p>";
 	} else{
 		$itemQuery = "SELECT * as items FROM m_goods WHERE m_goods_name LIKE %'".$search_value."%'";
-		$itemResult = mysqli_query($dbconn,$itemQuery);
+		$itemResult = mysqli_query($conn,$itemQuery);
 
 		if (!$itemResult) {
-			printf("Error: %s\n", mysqli_error($dbconn));
+			printf("Error: %s\n", mysqli_error($conn));
 			exit();
 			}
 
