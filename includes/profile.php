@@ -24,8 +24,8 @@
 ?>
 
         <form action="includes/profile-edit.php" method="POST">
-            <div><label>Name : <input type="text" value="<?php echo $value1 . " " . $value2?>"></label></div>
-            <div><label>Location : <input type="text" value="<?php echo $value3?>"></label></div>
+            <div><label>Name : <input type="text" value="<?php echo $value1 . " " . $value2?>" disabled></label></div>
+            <div><label>Location : <input type="text" value="<?php echo $value3?>" disabled></label></div>
         
             <input type="submit" name="submit" value="edit">
         </form>

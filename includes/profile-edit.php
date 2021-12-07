@@ -1,4 +1,5 @@
 <?php   
+	session_start();
     include_once "db.php";
 
     include_once "functions.php";
@@ -6,11 +7,9 @@
     $value2 = $_SESSION["fname"];
     $value3 = $_SESSION["location"];
 
-?>
 
-<?php
-	include_once "includes/db.php";
-	session_start();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +30,7 @@
 <body>
 	<!-- Header/banner for web page -->
 	<header>
-		<h1><a href="index.php">Merida Shop</a></h1>
+		<h1><a href="../index.php">Merida Shop</a></h1>
 	</header>
 
 			<nav class="primary-nav">
@@ -77,5 +76,6 @@
             $conn->query($sql);
         }
 
+        header("Location: ../index.php");
     }
 ?>
