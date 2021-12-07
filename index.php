@@ -12,9 +12,17 @@ require_once "includes/db.php"
     if (isset($_GET['search'])) {
 
         $search_value = $_GET["search"];
+        $searchType = $_GET['searchTypes'];
+        $filter ="";
+
+        if ($searchType != "" && $searchType != "All Items" ) {
+
+            $filter=$searchType;
+        }
 
 
-        $searchQuery = "SELECT COUNT(*) as itemCheck FROM m_goods WHERE m_goods_name LIKE '%$search_value%'";
+
+        $searchQuery = "SELECT COUNT(*) as itemCheck FROM m_goods WHERE m_goods_name LIKE '%$search_value%' AND  m_goods_type LIKE '%$filter%'";
         $searchResult = mysqli_query($conn, $searchQuery);
 
         //For debugging
@@ -30,7 +38,7 @@ require_once "includes/db.php"
         if ($countSearch == 0) {
             echo "<p> Nothing Found!</p>";
         } else{
-            $sql= "SELECT * FROM m_goods WHERE m_goods_name LIKE '%$search_value%'";
+            $sql= "SELECT * FROM m_goods WHERE m_goods_name LIKE '%$search_value%' AND  m_goods_type LIKE '%$filter%'";
             $result = $conn->query($sql);
 
             echo "<div class='container'>
