@@ -42,7 +42,7 @@ require_once "includes/db.php"
 
                 if($counter == 2) {
                     $counter = 0;
-                    echo "  </div></div>
+                    echo "  </div></div><hr>
                         <div class='container'>
                         <div class='row'>";
                 }
@@ -63,6 +63,10 @@ require_once "includes/db.php"
                                             </div>
                             </div>";
                 $counter++;
+            }
+
+            if($counter != 0){
+                echo" </div></div><hr>";
             }
 
         }
