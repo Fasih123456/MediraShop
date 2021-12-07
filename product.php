@@ -50,7 +50,13 @@
 					}
 					
 					$buyLink = "card.php";
-					$querySQL = "SELECT * FROM `m_card` WHERE `m_account_id` = {$_GET['id']}";
+					$querySQL = "SELECT * FROM `m_card` 
+								RIGHT JOIN `m_account`
+								ON `m_account`.`m_account_id`= `m_card`.`m_account_id`
+								RIGHT JOIN `m_login`
+								ON `m_account`.`m_login_id`= `m_login`.`m_id`
+								WHERE `m_login`.`m_id` = {$_SESSION['id']}";
+								
 					$result = $conn->query($querySQL);
 					if ($result->num_rows > 0) {
 						$buyLink = "checkout.php?id={$_GET['id']}";
