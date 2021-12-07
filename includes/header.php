@@ -1,12 +1,12 @@
 <?php
-	include_once "includes/db.php";
-	session_start();
+include_once "includes/db.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +18,7 @@
 
 
     <!-- Additional CSS Files -->
+
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -27,59 +28,57 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
-<!--
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-TemplateMo 571 Hexashop
+    <!--
 
-https://templatemo.com/tm-571-hexashop
+    TemplateMo 571 Hexashop
 
--->
-    </head>
-    
-    <body>
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a class="navbar-brand" href="index.php" style="margin-top: .8cm;">Merida Shop</a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-<<<<<<< HEAD
-														<li class='nav-item'><form class="form-inline my-2 my-lg-0" method="GET"> <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search"> <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form></li>
-=======
-														<li class='nav-item'><form class="form-inline my-2 my-lg-0" method="POST"> <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search"> <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form></li>
->>>>>>> 42fe19be3a7d82eba19096be7c88fc1ef9eca1c2
-                            <li class='nav-item'><a class='nav-link' href='index.php'>Home</a></li>
-														<li class='nav-item'><a class='nav-link' href='index.php'>Cart</a></li>
-														
-                        </ul>        
-												
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
+    https://templatemo.com/tm-571-hexashop
+
+    -->
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a class="navbar-brand" href="index.php" style="margin-top: .8cm;">Merida Shop</a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class='nav-item'><form class="form-inline my-2 my-lg-0" method="GET"> <input class="form-control mr-lg-2" type="text" placeholder="Search" name="search" id ='search'> <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form></li>
+                        <li class='nav-item'><a class='nav-link' href='index.php'>Home</a></li>
+                        <li class='nav-item'><a class='nav-link' href='index.php'>Cart</a></li>
+
+                    </ul>
+
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
             </div>
         </div>
-				
-			</header>
-    <!-- ***** Header Area End ***** -->
-    <main id="homepg-main-content" class="pg-main-content">
-    </main>
+    </div>
+
+</header>
+<!-- ***** Header Area End ***** -->
+<main id="homepg-main-content" class="pg-main-content">
+</main>
