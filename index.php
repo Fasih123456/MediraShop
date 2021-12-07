@@ -61,7 +61,7 @@ require_once "includes/db.php"
                                       
                                             <div class='down-content'>
                                                     <h4>".$row[3]. "</h4>
-                                                    <span>" . $row['5']. "</span>
+                                                    <span>$" . $row['5']. "</span>
                                                      <div class='hover-content'>
                                                             <ul>
                                                             
@@ -105,7 +105,7 @@ require_once "includes/db.php"
                                       
                                             <div class='down-content'>
                                                     <h4>".$row[3]. "</h4>
-                                                    <span>" . $row['5']. "</span>
+                                                    <span>$" . $row['5']. "</span>
                                                      <div class='hover-content'>
                                                             <ul>
                                                             
