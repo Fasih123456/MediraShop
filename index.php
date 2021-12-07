@@ -5,7 +5,7 @@
 ?>
 
 	<main id="homepg-main-content">
-		Currently At index.php!
+
 	</main>
 
 <?php

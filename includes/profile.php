@@ -2,10 +2,6 @@
     include_once "db.php";
     include_once "header.php";
 
-    echo "<h1>Account Information</h1>";
-
-
-
         $id = $_SESSION["id"];
 
         $sql = "SELECT * FROM m_account WHERE m_account_id=$id";
@@ -22,10 +18,17 @@
         $value2 = $_SESSION["fname"];
         $value3 = $_SESSION["location"];
 ?>
+<form action="includes/profile-edit.php" method="POST">
+<div class="card">
+  <div class="card-header">
+  Account Information
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><label>Name : <input type="text" value="<?php echo $value1 . " " . $value2?>" disabled></label></li>
+    <li class="list-group-item"><label>Location : <input type="text" value="<?php echo $value3?>" disabled></label></li>
+    <li class="list-group-item"><input type="submit" name="submit" value="Edit Account Information"></li>
+  </ul>
+</div>
+</form>
 
-        <form action="includes/profile-edit.php" method="POST">
-            <div><label>Name : <input type="text" value="<?php echo $value1 . " " . $value2?>" disabled></label></div>
-            <div><label>Location : <input type="text" value="<?php echo $value3?>" disabled></label></div>
-        
-            <input type="submit" name="submit" value="edit">
-        </form>
+
