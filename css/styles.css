@@ -1,0 +1,26 @@
+.card {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.product-section {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.product-img {
+  width: 350px;
+}
+.product-edit {
+  align-items: left;
+}
+.product-edit > form > div > label {
+  background-color: grey;
+  color: white;
+}
+.form-group {
+  text-align: left;
+}
+
+.product-header {
+  text-align: center;
+}

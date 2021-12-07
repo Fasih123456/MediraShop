@@ -89,13 +89,13 @@ CREATE TABLE `m_goods` (
 -- Dumping data for table `m_goods`
 --
 INSERT INTO `m_goods` (`m_goods_id`, `m_account_id`, `m_goods_type`, `m_goods_name`, `m_goods_description`, `m_goods_price`, `m_goods_imagePath`) VALUES
-(1, '1', 'Furniture', 'Chair', 'Oak wood chair with cushion', '99.99', 'images/testChair.jpg' ),
-(2, '1', 'Furniture', 'Desk', 'Black, plastic dressor, 4 draws, brand new', '150.00', 'images/testDesk.jpg'),
-(3, '2', 'Grocery', 'Orange', 'Florida navel oranges 3lb', '5.99', 'images/testOrange.jpg'),
-(4, '2', 'Electronics', 'Phone', 'Brand new smartphone, warranty up to 3 years', '500.00', 'images/testPhone.jpg'),
-(5, '2', 'clothing', 'scarf', 'Red, wool, men and women', '19.99', 'images/testScarf.jpg'),
-(6, '2', 'clothing', 'T-shirt', 'Blue cotton shirt from nameBrand company', '39.99', 'images/testT-Shirt.jpg'),
-(7, '2', 'Gifts', 'Starbucks Gift Card', 'E-gift card, $25.00', '25.00', 'images/testGiftCard.jpg');
+(1, '1', 'Furniture', 'Chair', 'Oak wood chair with cushion', '99.99', 'images/Chair.jpg' ),
+(2, '1', 'Furniture', 'Desk', 'Black, plastic dressor, 4 draws, brand new', '150.00', 'images/Desk.jpg'),
+(3, '2', 'Grocery', 'Orange', 'Florida navel oranges 3lb', '5.99', 'images/Orange.jpg'),
+(4, '2', 'Electronics', 'Phone', 'Brand new smartphone, warranty up to 3 years', '500.00', 'images/Phone.jpg'),
+(5, '2', 'Clothing', 'scarf', 'Red, wool, men and women', '19.99', 'images/Scarf.jpg'),
+(6, '2', 'Clothing', 'T-shirt', 'Blue cotton shirt from nameBrand company', '39.99', 'images/T-Shirt.jpg'),
+(7, '2', 'Gifts', 'Gift Card', 'E-gift card, $25.00', '25.00', 'images/Gift Card.jpg');
 
 -- --------------------------------------------------------
 --

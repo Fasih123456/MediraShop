@@ -1,6 +1,6 @@
 <?php
 	require_once "includes/header.php";
-
+    require_once "includes/db.php";
 	require_once "includes/functions.php";
 ?>
 
@@ -22,5 +22,7 @@ if(isset($_GET['profile'])){
 	include "includes/profile.php";
 }
 
-	require_once "includes/footer.php";
+
+require_once "includes/footer.php";
 ?>
+
