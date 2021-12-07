@@ -8,9 +8,15 @@
     function verifyPassword(){
         $password = sanitizeData($_POST["password"]);
 
-        //No regex pattern has been added yet.
+        $validRegexPattern = "((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W))";
 
         //No password reentry has been added yet.
+
+        $value = preg_match($validRegexPattern,$password);
+
+        if($value == 0){//meaning regex pattren is not valid
+			echo "<p>Password is not strong enough</p>";
+		}
 
         hashPassword($password);
     }

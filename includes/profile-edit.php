@@ -82,7 +82,7 @@
         }
 
         if(!empty($location)){
-            $sql = "UPDATE m_account SET m_account_lname='$location' WHERE m_login_id='$id'";
+            $sql = "UPDATE m_account SET m_account_location='$location' WHERE m_login_id='$id'";
             $conn->query($sql);
             $updated = true;
         }

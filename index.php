@@ -10,7 +10,9 @@
 
 <?php
 
-if(isset($_GET['login'])){
+
+
+if(isset($_GET['login']) || !isset($_SESSION["id"])){
 	include "includes/login.php";
 }
 

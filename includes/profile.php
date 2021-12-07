@@ -4,7 +4,7 @@
 
         $id = $_SESSION["id"];
 
-        $sql = "SELECT * FROM m_account WHERE m_account_id=$id";
+        $sql = "SELECT * FROM m_account WHERE m_login_id=$id";
 
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
@@ -31,4 +31,36 @@
 </div>
 </form>
 
+<?php 
+    $value = $row["m_seller"];
+
+    if($value){
+    $htmlbody = <<<ENDBODY
+    <div class="card">
+    <div class="card-header">
+    Your Sucessful Products
+    </div>
+    ENDBODY;
+
+    $id = $row["m_account_id"];
+    $sql = "SELECT * FROM m_goods WHERE m_account_id='$id'";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()){
+        $htmlbody = $htmlbody . <<<ENDBODY
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><label>Name : <input type="text" value="$value1 $value2" disabled></label></li>
+                <li class="list-group-item"><label>Location : <input type="text" value="$value3" disabled></label></li>
+                <li class="list-group-item"><input type="submit" name="submit" value="Edit Account Information"></li>
+            </ul>
+        ENDBODY;
+
+    }
+
+    $htmlbody = $htmlbody . <<<ENDBODY
+    </div>
+    ENDBODY;
+
+    echo $htmlbody . PHP_EOL;
+    }
+?>
 
