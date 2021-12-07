@@ -60,7 +60,11 @@ https://templatemo.com/tm-571-hexashop
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
+<<<<<<< HEAD
 														<li class='nav-item'><form class="form-inline my-2 my-lg-0" method="GET"> <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search"> <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form></li>
+=======
+														<li class='nav-item'><form class="form-inline my-2 my-lg-0" method="POST"> <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search"> <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form></li>
+>>>>>>> 42fe19be3a7d82eba19096be7c88fc1ef9eca1c2
                             <li class='nav-item'><a class='nav-link' href='index.php'>Home</a></li>
 														<li class='nav-item'><a class='nav-link' href='index.php'>Cart</a></li>
 														
@@ -77,3 +81,5 @@ https://templatemo.com/tm-571-hexashop
 				
 			</header>
     <!-- ***** Header Area End ***** -->
+    <main id="homepg-main-content" class="pg-main-content">
+    </main>
