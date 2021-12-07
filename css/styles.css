@@ -4,6 +4,9 @@ img{
     max-height: 400px;
 }
 #search{
-    padding-right: 400px;
+    padding-right: 200px;
 }
-
+#searchTypes{
+    max-width: 200px;
+    margin-right: 20px;
+}
