@@ -63,7 +63,28 @@ session_start();
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class='nav-item'><form class="form-inline my-2 my-lg-0" method="GET"> <input class="form-control mr-lg-2" type="text" placeholder="Search" name="search" id ='search'> <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form></li>
+
+                        <li class='nav-item'>
+                            <form class="form-inline my-2 my-lg-0" method="GET">
+                                <select list="searchTypes" name="searchTypes" id="searchTypes" placeholder="Filter">
+                                    <option value="All Items">All</option>
+                                    <?php
+
+                                    $sql= "SELECT DISTINCT m_goods_type FROM m_goods";
+                                    $result = $conn->query($sql);
+
+                                    while ($row = $result->fetch_row()) {
+                                        echo"<option value='" . $row[0]. "'>" . $row[0]. "</option>";
+
+                                    }
+                                    ?>
+
+                                </select>
+                                <input class="form-control mr-lg-2" type="text" placeholder="Search" name="search" id ='search'>
+                                <button name="searchSubmit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+
                         <li class='nav-item'><a class='nav-link' href='index.php'>Home</a></li>
                         <li class='nav-item'><a class='nav-link' href='index.php'>Cart</a></li>
 
