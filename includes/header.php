@@ -2,7 +2,7 @@
 include_once "acesscontrol.php";
 	include_once "includes/db.php";
 	session_start();
-
+    $_SESSION["value"] = 5;
 ?>
 
 <!DOCTYPE html>
