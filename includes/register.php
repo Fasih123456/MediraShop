@@ -8,9 +8,15 @@
     function verifyPassword(){
         $password = sanitizeData($_POST["password"]);
 
-        //No regex pattern has been added yet.
+        $validRegexPattern = "((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W))";
 
         //No password reentry has been added yet.
+
+        $value = preg_match($validRegexPattern,$password);
+
+        if($value == 0){//meaning regex pattren is not valid
+			echo "<p>Password is not strong enough</p>";
+		}
 
         hashPassword($password);
     }
@@ -65,27 +71,21 @@
      }
 
 ?>
-
-<nav id="temp-login-nav">
-   <form method="post" action="">
-		<div>
-			<label>FirstName: <input type="text" name="fname" autofocus required></label>
-		</div>
-		<div>
-			<label>LastName: <input type="text" name="lname" required></label>
-		</div>
-        <div>
-			<label>Email Address: <input type="email" name="username" autofocus required></label>
-		</div>
-		<div>
-			<label>Password: <input type="password" name="password" required></label>
-		</div>
-        <div>
-			<label>Location: <input type="text" name="location" autofocus required></label>
-		</div>
-		<div>
-			<label>User type: <input type="dropdown" name="usertype" required></label>
-		</div>
-		<input type="submit" name="register" value="register">
-   </form>
-</nav>
+<div class='main-banner' id='top'>
+<form method="post" action="">
+<div class="card1">
+  <div class="card-header">
+  Enter Your Login Information!
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><label>FirstName: <input type="text" name="fname" autofocus required></label></li>
+    <li class="list-group-item"><label>LastName: <input type="text" name="lname" required></label></li>
+    <li class="list-group-item"><label>Email Address: <input type="email" name="username" autofocus required></label></li>
+    <li class="list-group-item"><label>Password: <input type="password" name="password" required></label></li>
+    <li class="list-group-item"><label>Location: <input type="text" name="location" autofocus required></label></li>
+    <li class="list-group-item"><label>User type: <input type="dropdown" name="usertype" required></label></li>
+    <li class="list-group-item"><input type="submit" name="register" value="Register"></li>
+  </ul>
+</div>
+</form>
+</div>

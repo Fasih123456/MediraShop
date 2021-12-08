@@ -1,3 +1,5 @@
+<div class='main-banner' id='top'>
+
 <?php
 include_once "db.php";
 include_once "functions.php";
@@ -9,18 +11,20 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
     $password = sanitizeData($_POST["password"]);
 
     $sql = "SELECT m_id,m_email,m_password FROM m_login WHERE m_email = '$email'";
-
+    echo $sql;
+    
     $result = $conn->query($sql);
 
     if ($result->num_rows == 0) {
         echo "<p>Incorrect username or password.</p>";
     } else {
         $row = $result->fetch_assoc();
-
-        if($password == $row["m_password"]){//if hashed passwords are being used then change this to password_verify($password, $row["e_password"])
+        
+        if(password_verify($password, $row["m_password"])){//if hashed passwords are being used then change this to password_verify($password, $row["e_password"])
             $_SESSION["email"] = $email;
             $_SESSION["id"] = $row["m_id"];
             $_SESSION['value'] = 0;
+
             //first name,location and last name are also available in another file as session values.
             header("Location: index.php");
             die;
@@ -32,17 +36,23 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
 }
 ?>
 
-<nav id="temp-login-nav">
-   <form method="post" action="">
-		<div>
-			<label>Username: <input type="text" name="username" autofocus></label>
-		</div>
-		<div>
-			<label>Password: <input type="password" name="password"></label>
-		</div>
-		<input type="submit" name="submit" value="Login">
+<form method="post" action="">
+<div class="card1">
+  <div class="card-header">
+  Enter Your Login Information!
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><label>Username: <input type="text" name="username" autofocus></label></li>
+    <li class="list-group-item"><label>Password: <input type="password" name="password"></label></label></li>
+    <li class="list-group-item"><input type="submit" name="submit" value="Login"><input type="submit" name="register" value="Register" id="register-button"></li>
+  </ul>
+</div>
+</form>
+</div>
 
-         <a href="index.php?register=true">Register</a>
-
-   </form>
-</nav>
+<?php
+    if(isset($_POST["register"])){
+        header("Location: index.php?register=true");
+        die();
+    }
+?>

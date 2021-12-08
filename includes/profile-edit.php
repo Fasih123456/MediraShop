@@ -1,4 +1,5 @@
 <?php   
+	session_start();
     include_once "db.php";
 
     include_once "functions.php";
@@ -6,11 +7,9 @@
     $value2 = $_SESSION["fname"];
     $value3 = $_SESSION["location"];
 
-?>
 
-<?php
-	include_once "includes/db.php";
-	session_start();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +21,7 @@
 
 	<!-- Link to the main CSS file for the page -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../css/styles.css">
 
 	<!-- Link to jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,7 +30,7 @@
 <body>
 	<!-- Header/banner for web page -->
 	<header>
-		<h1><a href="index.php">Merida Shop</a></h1>
+		<h1><a href="../index.php">Merida Shop</a></h1>
 	</header>
 
 			<nav class="primary-nav">
@@ -45,13 +44,20 @@
 
 <p>Please Enter the values which you would like to have changed, leave fields blank if you would not like to change them.</p>
 <form action="" method="POST">
-    <div><label>Origional First Name : <input type="text" name="fname" value="<?php echo $value1 ?>" disabled></label></div>
-    <div><label>Origional Last Name : <input type="text" name="lname" value="<?php echo $value2 ?>" disabled></div>
-    <div><label>Origional Location : <input type="text" name="Location" value="<?php echo $value3 ?>" disabled></label></div>
-    <div><label>New First Name : <input type="text" name="newfname" placeholder="first name"></label></div>
-    <div><label>New Last Name : <input type="text" name="newlname" placeholder="last name"></label></div>
-    <div><label>New Location : <input type="text" name="newLocation" placeholder="Location"></label></div>
-    <input type="submit" name="submit" value="Confirm Edit">
+<div class="card1" id="profile-edit">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><label>Origional First Name : <input type="text" name="fname" value="<?php echo $value1 ?>" disabled></label></li>
+    <li class="list-group-item"><label>Origional Last Name : <input type="text" name="lname" value="<?php echo $value2 ?>" disabled></label></li>
+    <li class="list-group-item"><label>Origional Location : <input type="text" name="Location" value="<?php echo $value3 ?>" disabled></label></li>
+    <li class="list-group-item"><label>New First Name : <input type="text" name="newfname" placeholder="first name"></label></li>
+    <li class="list-group-item"><label>New Last Name : <input type="text" name="newlname" placeholder="last name"></li>
+    <li class="list-group-item">New Location : <input type="text" name="newLocation" placeholder="Location"></label></li>
+    <li class="list-group-item"> <input type="submit" name="submit" value="Confirm Edit"></li>
+  </ul>
+</div>
 </form>
 
 <?php
@@ -60,22 +66,33 @@
         $fname = sanitizeData($_POST["newfname"]);
         $lname = sanitizeData($_POST["newlname"]);
         $location = sanitizeData($_POST["newLocation"]);
+        $updated = false;
 
         $id = $_SESSION["id"];
         if(!empty($fname)){
             $sql = "UPDATE m_account SET m_account_fname='$fname' WHERE m_login_id='$id'";
             $conn->query($sql);
+            $updated = true;
         }
 
         if(!empty($lname)){
             $sql = "UPDATE m_account SET m_account_lname='$lname' WHERE m_login_id='$id'";
             $conn->query($sql);
+            $updated = true;
         }
 
         if(!empty($location)){
-            $sql = "UPDATE m_account SET m_account_lname='$location' WHERE m_login_id='$id'";
+            $sql = "UPDATE m_account SET m_account_location='$location' WHERE m_login_id='$id'";
             $conn->query($sql);
+            $updated = true;
         }
 
+        if($updated){
+            header("Location: ../index.php");
+            die();
+        }
+        
     }
+
+    include_once "footer.php";
 ?>

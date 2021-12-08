@@ -1,28 +1,32 @@
+
 <?php
-	require_once "includes/header.php";
-    require_once "includes/db.php";
-	require_once "includes/functions.php";
+require_once "includes/header.php";
+
+require_once "includes/functions.php";
+
+require_once "includes/db.php"
 ?>
 
-	<main id="homepg-main-content">
-		Currently At index.php!
-	</main>
 
 <?php
 
-if(isset($_GET['login'])){
+if(isset($_SESSION["id"])){
+
+	if(isset($_GET['profile'])){
+		include "includes/profile.php";
+	}else{
+		include "includes/homepage.php";
+	}
+}else{
+	if(isset($_GET['register'])){
+		include "includes/register.php";
+	}else{
 	include "includes/login.php";
+	}
 }
 
-if(isset($_GET['register'])){
-	include "includes/register.php";
-}
 
-if(isset($_GET['profile'])){
-	include "includes/profile.php";
-}
 
 
 require_once "includes/footer.php";
 ?>
-
