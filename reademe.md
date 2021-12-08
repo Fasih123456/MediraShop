@@ -14,13 +14,16 @@ does not have a card linked to their account, they will be brought to the card p
 Once a card is added, or if a card already exists, the user will be brought to a checkout page where they can review the item
 and click submit, which will then return them to the homepage. 
 
+Password and username for login testing:
+Login: user@mail.com
+Password: Post@123
 
 Members:
 
 Adbullah Al Mukaddim      B00XXXXXX ab845312@dal.ca	URL: https://web.cs.dal.ca/~
 ZhenYu Lei 	          B00XXXXXX zh772515@dal.ca	URL: https://web.cs.dal.ca/~
 Nathaniel Wilson          B00834477 nt680476@dal.ca	URL: https://web.cs.dal.ca/~nwilson/
-Fasih Ul Islam            B00XXXXXX fs272918@dal.ca	URL: https://web.cs.dal.ca/~
+Fasih Ul Islam            B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/~
 Dorian Germain Zambo Zamb B00XXXXXX dr704046@dal.ca	URL: https://web.cs.dal.ca/~
 
 Citations:
@@ -47,7 +50,7 @@ Nathaniel Wilson:
 
 Fasih Ul Islam:
 	a) Planning: User stories 
-	b) Design: Registration and profile design layouts for both mobile and desktop
+	b) Design: Login, Registration and profile design layouts for both mobile and desktop
 	c) Development: Profile CRUD: the profile.php. profile-edit.php, login.php, register.php, logout.php
 
 Dorian Germain Zambo Zambo:

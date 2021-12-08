@@ -1,4 +1,5 @@
 <?php 
+include_once "acesscontrol.php";
      /* 
     Image upload code take and modified from: https://www.w3schools.com/PHP/php_file_upload.asp
     Date: December 6, 2021

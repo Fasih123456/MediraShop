@@ -1,4 +1,5 @@
 <?php
+include_once "acesscontrol.php";
     //sanitizing the data
 	function sanitizeData($data)
 	{

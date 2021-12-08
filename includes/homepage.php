@@ -2,6 +2,7 @@
 <div class='main-banner' id='top'>
 
     <?php
+    include_once "acesscontrol.php";
     if (isset($_GET['search'])) {
 
         $search_value = $_GET["search"];

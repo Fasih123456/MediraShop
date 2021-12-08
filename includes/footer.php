@@ -1,4 +1,5 @@
 <?php
+include_once "acesscontrol.php";
 ?>
 	<!-- Footer for the web page -->
 		 <!-- ***** Footer Start ***** -->

@@ -1,4 +1,5 @@
 <?php 
+include_once "acesscontrol.php";
 $htmlBody = <<<ENDBODY
 <div class="product-section">
     <div class="card">

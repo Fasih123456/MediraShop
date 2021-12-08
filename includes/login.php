@@ -1,6 +1,7 @@
 <div class='main-banner' id='top'>
 
 <?php
+include_once "acesscontrol.php";
 include_once "db.php";
 include_once "functions.php";
 

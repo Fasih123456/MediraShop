@@ -1,4 +1,5 @@
 <?php
+include_once "acesscontrol.php";
 $htmlBody = <<<ENDBODY
 <div class="product-section row">
     <div class="product-header col-lg-4">

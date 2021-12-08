@@ -1,4 +1,5 @@
 <?php
+include_once "acesscontrol.php";
 /*
  *	db.php
  *	Connects to the Database on localhost.
