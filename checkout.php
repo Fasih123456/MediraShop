@@ -10,8 +10,9 @@
             <div class="card-header">
                 <h3>Review order</h3>
             </div>
-           
+            
             <?php
+                //echo "SESIION" . $_SESSION['id'];
                 $sqlGoods = "SELECT * FROM `m_goods` WHERE `m_goods_id` = {$_GET['id']}";
                 $resultGoods = $conn->query($sqlGoods);
                 $sqlCard = "SELECT * FROM `m_card` 
@@ -47,7 +48,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><p><strong>Card Holder Name:</strong> {$rowCard['m_card_fname']} {$rowCard['m_card_lname']}</p></li>
                             <li class="list-group-item"><p><strong>Card Number:</strong> {$last4DigitCardNumber}</p></li>
-                            <li class="list-group-item"><p><strong>Address:</strong>  {$rowCard['m_card_address']}</strong></p></li>
+                            <li class="list-group-item"><p><strong>Address:</strong> {$rowCard['m_card_address']}, {$rowCard['m_card_city']}, {$rowCard['m_card_country']} </strong></p></li>
                         </ul>
                     </div>
                     <div style="margin:20px">

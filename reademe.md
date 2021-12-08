@@ -20,22 +20,25 @@ Password: Post@123
 
 Members:
 
-Adbullah Al Mukaddim      B00XXXXXX ab845312@dal.ca	URL: https://web.cs.dal.ca/~
-ZhenYu Lei 	          B00XXXXXX zh772515@dal.ca	URL: https://web.cs.dal.ca/~
-Nathaniel Wilson          B00834477 nt680476@dal.ca	URL: https://web.cs.dal.ca/~nwilson/
-Fasih Ul Islam            B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/~
-Dorian Germain Zambo Zamb B00XXXXXX dr704046@dal.ca	URL: https://web.cs.dal.ca/~
+Adbullah Al Mukaddim       B00XXXXXX ab845312@dal.ca	URL: https://web.cs.dal.ca/~
+ZhenYu Lei 	           B00XXXXXX zh772515@dal.ca	URL: https://web.cs.dal.ca/~
+Nathaniel Wilson           B00834477 nt680476@dal.ca	URL: https://web.cs.dal.ca/~nwilson/
+Fasih Ul Islam             B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/~
+Dorian Germain Zambo Zambo B00XXXXXX dr704046@dal.ca	URL: https://web.cs.dal.ca/~
 
 Citations:
-
+logout.php
+header.php
+product-processing.php
 
 Contributions:
 
 Adbullah Al Mukaddim:
 	a) Planning: How to use the website, user stories, document layout, organized who does what
 	b) Design: Product create, remove, update and details (CRUD) design layouts for both mobile and desktop, organized who does what
-	c) Development:Item CRUD: product-view.php, product-create.php, product-edit.php, images folder, as well as helping on the 
-	implementation of many of the other parts and organizing how everything should come together. 
+	c) Development:Item CRUD: product-view.php, product-create.php, product-edit.php, process-form.php
+	 product-processing.php images folder, as well as helping on the implementation of many of the other parts and 
+         organizing how everything should come together. 
 
 ZhenYu Lei:
 	a) Planning: How to use the website, goals and types of users

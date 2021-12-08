@@ -1,3 +1,9 @@
+
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 footer.php
+	 Author: Dorian Germain Zambo Zambo
+-->
 <?php
 include_once "acesscontrol.php";
 ?>

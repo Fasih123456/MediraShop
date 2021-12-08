@@ -1,4 +1,10 @@
-<?php 
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 product-processing.php
+	 Author: Adbullah Al Mukaddim
+-->
+
+<?php
 include_once "acesscontrol.php";
      /* 
     Image upload code take and modified from: https://www.w3schools.com/PHP/php_file_upload.asp

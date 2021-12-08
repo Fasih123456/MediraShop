@@ -1,3 +1,9 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 logout.php
+	 Author: Fasih Ul Islam
+-->
+
 <?php
 
 /*Zybooks code was used for this assigment

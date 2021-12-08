@@ -1,4 +1,9 @@
-<?php 
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 product-edit.php
+	 Author: Adbullah Al Mukaddim
+-->
+<?php
 include_once "acesscontrol.php";
 $htmlBody = <<<ENDBODY
 <div class="product-section row">
