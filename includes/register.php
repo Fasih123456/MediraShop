@@ -73,7 +73,7 @@
 ?>
 
 <form method="post" action="">
-<div class="card">
+<div class="card1">
   <div class="card-header">
   Enter Your Login Information!
   </div>

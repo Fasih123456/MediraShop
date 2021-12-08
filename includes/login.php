@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
 }
 ?>
 <form method="post" action="">
-<div class="card">
+<div class="card1">
   <div class="card-header">
   Enter Your Login Information!
   </div>

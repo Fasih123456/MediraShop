@@ -19,7 +19,7 @@
         $value3 = $_SESSION["location"];
 ?>
 <form action="includes/profile-edit.php" method="POST">
-<div class="card">
+<div class="card1">
   <div class="card-header">
   Account Information
   </div>
@@ -36,7 +36,7 @@
 
     if($value){
     $htmlbody = <<<ENDBODY
-    <div class="card">
+    <div class="card1">
     <div class="card-header">
     Your Sucessful Products
     </div>
@@ -45,15 +45,15 @@
     $id = $row["m_account_id"];
     $sql = "SELECT * FROM m_goods WHERE m_account_id='$id'";
     $result = $conn->query($sql);
+    $id = $row["id"];
     while($row = $result->fetch_assoc()){
         $htmlbody = $htmlbody . <<<ENDBODY
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><label>Name : <input type="text" value="$value1 $value2" disabled></label></li>
                 <li class="list-group-item"><label>Location : <input type="text" value="$value3" disabled></label></li>
-                <li class="list-group-item"><input type="submit" name="submit" value="Edit Account Information"></li>
+                <li class="list-group-item"><a href=product.php?id='$id'>Go To your product</a></li>
             </ul>
         ENDBODY;
-
     }
 
     $htmlbody = $htmlbody . <<<ENDBODY
