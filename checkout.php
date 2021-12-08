@@ -1,3 +1,9 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 checkout.php
+	 Author: ZhenYu Lei
+-->
+
 <?php
     require_once "includes/header.php";
     require_once "includes/db.php";
