@@ -56,6 +56,7 @@
                     <ul class="nav">
 
                         <li class='nav-item'>
+						<?php if(isset($_SESSION["id"])){?>
                             <form class="form-inline my-2 my-lg-0" method="GET">
                                 <select list="searchTypes" name="searchTypes" id="searchTypes" placeholder="Filter">
                                     <option value="All Items">All</option>
@@ -76,9 +77,11 @@
                             </form>
                         </li>
 
-                        <li class='nav-item'><a class='nav-link' href='index.php?login=true'>Home</a></li>
-                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>Cart</a></li>
+						
 
+                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>View Profile</a></li>
+						<li class='nav-item'><a class='nav-link' href='includes/logout.php'>Logout</a></li>
+						<?php }?>
                     </ul>
 
                     <a class='menu-trigger'>

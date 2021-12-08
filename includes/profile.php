@@ -18,6 +18,7 @@
         $value2 = $_SESSION["fname"];
         $value3 = $_SESSION["location"];
 ?>
+<div class='main-banner' id='top'>
 <form action="includes/profile-edit.php" method="POST">
 <div class="card1">
   <div class="card-header">
@@ -63,4 +64,6 @@
     echo $htmlbody . PHP_EOL;
     }
 ?>
+
+</div>
 
