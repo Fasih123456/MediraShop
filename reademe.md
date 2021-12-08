@@ -11,6 +11,8 @@ On the homepage each product is given a small panel from which a user can see an
 if they would like to purchase it they can click the shopping cart button. This directs them to the product-view page 
 where they can see more information about the product. Here they can choose to purchase the product. If the user 
 does not have a card linked to their account, they will be brought to the card page where they can add a new card to their account.
+Once a card is added, or if a card already exists, the user will be brought to a checkout page where they can review the item
+and click submit, which will then return them to the homepage. 
 
 
 Members:
