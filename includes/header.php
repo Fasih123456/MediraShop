@@ -1,6 +1,7 @@
 <?php
 	include_once "includes/db.php";
 	session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +76,7 @@
                             </form>
                         </li>
 
-                        <li class='nav-item'><a class='nav-link' href='index.php'>Home</a></li>
+                        <li class='nav-item'><a class='nav-link' href='index.php?login=true'>Home</a></li>
                         <li class='nav-item'><a class='nav-link' href='index.php'>Cart</a></li>
 
                     </ul>

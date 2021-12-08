@@ -45,7 +45,7 @@
     $id = $row["m_account_id"];
     $sql = "SELECT * FROM m_goods WHERE m_account_id='$id'";
     $result = $conn->query($sql);
-    $id = $row["id"];
+
     while($row = $result->fetch_assoc()){
         $htmlbody = $htmlbody . <<<ENDBODY
             <ul class="list-group list-group-flush">

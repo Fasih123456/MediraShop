@@ -16,8 +16,8 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
         echo "<p>Incorrect username or password.</p>";
     } else {
         $row = $result->fetch_assoc();
-
-        if(password_verify($password, $row["e_password"])){//if hashed passwords are being used then change this to password_verify($password, $row["e_password"])
+        echo $row["m_password"];
+        if($password == $row["m_password"]){//if hashed passwords are being used then change this to password_verify($password, $row["e_password"])
             $_SESSION["email"] = $email;
             $_SESSION["id"] = $row["m_id"];
             $_SESSION['value'] = 0;
@@ -32,6 +32,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
      }
 }
 ?>
+<div class='main-banner' id='top'>
 <form method="post" action="">
 <div class="card1">
   <div class="card-header">
@@ -44,6 +45,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
   </ul>
 </div>
 </form>
+</div>
 
 <?php
     if(isset($_POST["register"])){
