@@ -1,6 +1,13 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 login.php
+	 Author: Fasih Ul Islam
+-->
+
 <div class='main-banner' id='top'>
 
 <?php
+include_once "acesscontrol.php";
 include_once "db.php";
 include_once "functions.php";
 
@@ -11,12 +18,12 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
     $password = sanitizeData($_POST["password"]);
 
     $sql = "SELECT m_id,m_email,m_password FROM m_login WHERE m_email = '$email'";
-    echo $sql;
+
     
     $result = $conn->query($sql);
 
     if ($result->num_rows == 0) {
-        echo "<p>Incorrect username or password.</p>";
+        echo "<p class='error'>Incorrect username or password.</p>";
     } else {
         $row = $result->fetch_assoc();
         
@@ -30,7 +37,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
             die;
         }else{
 
-            echo "<p>Incorrect username or password.</p>";
+            echo "<p class='error'>Incorrect username or password.</p>";
         }
      }
 }

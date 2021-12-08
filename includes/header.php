@@ -1,5 +1,11 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 header.php
+	 Author: Nathaniel Wilson and Dorian Germain Zambo Zambo
+-->
 <?php
-	require_once "includes/db.php";
+include_once "acesscontrol.php";
+	include_once "includes/db.php";
 	session_start();
 
 ?>
@@ -56,6 +62,7 @@
                     <ul class="nav">
 
                         <li class='nav-item'>
+						<?php if(isset($_SESSION["id"])){?>
                             <form class="form-inline my-2 my-lg-0" method="GET">
                                 <select list="searchTypes" name="searchTypes" id="searchTypes" placeholder="Filter">
                                     <option value="All Items">All</option>
@@ -76,9 +83,11 @@
                             </form>
                         </li>
 
-                        <li class='nav-item'><a class='nav-link' href='index.php?login=true'>Home</a></li>
-                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>Cart</a></li>
+						
 
+                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>View Profile</a></li>
+						<li class='nav-item'><a class='nav-link' href='includes/logout.php'>Logout</a></li>
+						<?php }?>
                     </ul>
 
                     <a class='menu-trigger'>

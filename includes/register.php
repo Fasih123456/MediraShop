@@ -1,4 +1,11 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 register.php
+	 Author: Fasih Ul Islam
+-->
+<div class='main-banner' id='top'>
 <?php
+include_once "acesscontrol.php";
     include_once "db.php";
 
     if(isset(($_POST['register']))){
@@ -15,7 +22,8 @@
         $value = preg_match($validRegexPattern,$password);
 
         if($value == 0){//meaning regex pattren is not valid
-			echo "<p>Password is not strong enough</p>";
+			echo "<p class='error'>Password is not strong enough</p>";
+            echo "<p class='error'>Enter a password with at least 1 captial letter, 1 small letter, 1 special character and 1 letter, Ex:Post@123 </p> ";
 		}
 
         hashPassword($password);
@@ -30,7 +38,7 @@
         $usertype = $_POST["usertype"];
 
 		if($usertype != "admin" && $usertype != "user" && $usertype != "seller"){//if drop box/check box is used then this code can be deleted
-			echo "<p>Invalid user type</p>";
+			echo "<p class='error'>Invalid user type</p>";
 		}else{
             $uservalue = 0;
             if($usertype == "seller"){
@@ -71,11 +79,11 @@
      }
 
 ?>
-<div class='main-banner' id='top'>
+
 <form method="post" action="">
 <div class="card1">
   <div class="card-header">
-  Enter Your Login Information!
+  Enter Your Registration Information!
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><label>FirstName: <input type="text" name="fname" autofocus required></label></li>

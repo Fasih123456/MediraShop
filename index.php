@@ -14,7 +14,10 @@ if(isset($_SESSION["id"])){
 
 	if(isset($_GET['profile'])){
 		include "includes/profile.php";
-	}else{
+	}else if(isset($_GET['viewprofile'])){
+		include "includes/profile-edit.php";
+	}
+	else{
 		include "includes/homepage.php";
 	}
 }else{

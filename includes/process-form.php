@@ -1,5 +1,10 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 process-form.php
+	 Author: Adbullah Al Mukaddim
+-->
 <?php
-
+include_once "acesscontrol.php";
     require_once "db.php";
 	require_once "functions.php";
 

@@ -1,45 +1,61 @@
-<?php   
-	session_start();
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 product-edit.php
+	 Author: Adbullah Al Mukaddim
+-->
+<?php
+include_once "acesscontrol.php";
     include_once "db.php";
+    include_once "header.php";
 
-    include_once "functions.php";
-    $value1 = $_SESSION["fname"];
-    $value2 = $_SESSION["fname"];
-    $value3 = $_SESSION["location"];
+        $id = $_SESSION["id"];
+
+        $sql = "SELECT * FROM m_account WHERE m_login_id=$id";
+
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+
+        $_SESSION["fname"] = $row["m_account_fname"];
+        $_SESSION["lname"] = $row["m_account_lname"];
+        $_SESSION["location"] = $row["m_account_location"];
 
 
-
-
+        $value1 = $_SESSION["fname"];
+        $value2 = $_SESSION["lname"];
+        $value3 = $_SESSION["location"];
 ?>
+<div class='main-banner' id='top'>
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Merdia Search Engine</title>
+    if(isset($_POST["submit"])){
 
-	<!-- Link to the main CSS file for the page -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="../css/styles.css">
+        $fname = sanitizeData($_POST["newfname"]);
+        $lname = sanitizeData($_POST["newlname"]);
+        $location = sanitizeData($_POST["newLocation"]);
+        $updated = false;
+  
+ 
+        $id = $_SESSION["id"];
+        if(!empty($fname)){
+            $sql = "UPDATE m_account SET m_account_fname='$fname' WHERE m_login_id='$id'";
+            $conn->query($sql);
+            $updated = true;
+        }
 
-	<!-- Link to jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
-</head>
-<body>
-	<!-- Header/banner for web page -->
-	<header>
-		<h1><a href="../index.php">Merida Shop</a></h1>
-	</header>
+        if(!empty($lname)){
+            $sql = "UPDATE m_account SET m_account_lname='$lname' WHERE m_login_id='$id'";
+            $conn->query($sql);
+            $updated = true;
+        }
 
-			<nav class="primary-nav">
-				<a href="#">Place Holder</a>
-				<a href="../index.php?profile=true">View Profile</a>
-				<a href="logout.php">Logout</a>
-			</nav>
-			<main id="homepg-main-content" class="pg-main-content">
-			</main>
+        if(!empty($location)){
+            $sql = "UPDATE m_account SET m_account_location='$location' WHERE m_login_id='$id'";
+            $conn->query($sql);
+            $updated = true;
+        }
+        header("Location: index.php?profile=true");
+    }
+?>
 
 
 <p>Please Enter the values which you would like to have changed, leave fields blank if you would not like to change them.</p>
@@ -60,39 +76,5 @@
 </div>
 </form>
 
-<?php
 
-    if(isset($_POST["submit"])){
-        $fname = sanitizeData($_POST["newfname"]);
-        $lname = sanitizeData($_POST["newlname"]);
-        $location = sanitizeData($_POST["newLocation"]);
-        $updated = false;
-
-        $id = $_SESSION["id"];
-        if(!empty($fname)){
-            $sql = "UPDATE m_account SET m_account_fname='$fname' WHERE m_login_id='$id'";
-            $conn->query($sql);
-            $updated = true;
-        }
-
-        if(!empty($lname)){
-            $sql = "UPDATE m_account SET m_account_lname='$lname' WHERE m_login_id='$id'";
-            $conn->query($sql);
-            $updated = true;
-        }
-
-        if(!empty($location)){
-            $sql = "UPDATE m_account SET m_account_location='$location' WHERE m_login_id='$id'";
-            $conn->query($sql);
-            $updated = true;
-        }
-
-        if($updated){
-            header("Location: ../index.php");
-            die();
-        }
-        
-    }
-
-    include_once "footer.php";
-?>
+</div>

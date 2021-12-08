@@ -43,13 +43,13 @@ img{
   margin-right: 2%;
 }
 
-/*
+
 .card1, .card-header{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width:24em;
-}*/
+}
 #profile-edit{
 
   display: block;
@@ -63,4 +63,24 @@ img{
 
 .bg-dark {
   background-color: #d3d3d3;
+}
+
+.error{
+  color: red;
+}
+
+@media only screen and (max-width: 768px){
+
+    .nav {
+        top: -70px; /* you'll have to figure out the exact number here */
+        position: static;
+        background-color: black;
+
+    }
+
+}
+
+#card1-ided{
+  margin-top: 30px;
+  padding-top: 30px;
 }
