@@ -1,3 +1,8 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 profile.php
+	 Author: Fasih Ul Islam
+-->
 <?php
 include_once "acesscontrol.php";
     include_once "db.php";

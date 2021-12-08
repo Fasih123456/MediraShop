@@ -1,4 +1,8 @@
-
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 homepage.php
+	 Author: Nathaniel Wilson and Dorian Germain Zambo Zambo
+-->
 <div class='main-banner' id='top'>
 
     <?php

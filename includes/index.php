@@ -1,4 +1,8 @@
-
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 index.php
+	 Author: Nathaniel Wilson
+-->
 <?php
 
 

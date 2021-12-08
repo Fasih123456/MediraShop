@@ -1,3 +1,8 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 header.php
+	 Author: Nathaniel Wilson and Dorian Germain Zambo Zambo
+-->
 <?php
 include_once "acesscontrol.php";
 	include_once "includes/db.php";

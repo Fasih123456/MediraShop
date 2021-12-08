@@ -1,3 +1,8 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 register.php
+	 Author: Fasih Ul Islam
+-->
 <div class='main-banner' id='top'>
 <?php
 include_once "acesscontrol.php";
