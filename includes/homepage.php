@@ -52,7 +52,7 @@
                         <div class='row'>";
                 }
 
-                echo "<div class='item'>
+                echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
                                   
                                             <img src='" . $row['6']. "'>
                                       
@@ -62,7 +62,7 @@
                                                      <div class='hover-content'>
                                                             <ul>
                                                             
-                                                                    <li><a href='includes/product.php'> <i class='fa fa-shopping-cart'></i></a></li>
+                                                                    <li><i class='fa fa-shopping-cart'></i></a></li>
                                                             </ul>
                                                     </div>
                                             </div>
@@ -96,7 +96,7 @@
                         <div class='row'>";
             }
 
-            echo "<div class='item'>
+            echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
                                   
                                             <img src='" . $row[6]. "'>
                                       
@@ -106,7 +106,7 @@
                                                      <div class='hover-content'>
                                                             <ul>
                                                             
-                                                                    <li><a href='includes/index.php?products=" . $row[0]. "'> <i class='fa fa-shopping-cart'></i></a></li>
+                                                                    <li><i class='fa fa-shopping-cart'></i></a></li>
                                                             </ul>
                                                     </div>
                                             </div>
