@@ -19,7 +19,7 @@
         $value3 = $_SESSION["location"];
 ?>
 <div class='main-banner' id='top'>
-<form action="includes/profile-edit.php" method="POST">
+<form action="profile-edit.php" method="POST">
 <div class="card1">
   <div class="card-header">
   Account Information
