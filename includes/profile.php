@@ -46,9 +46,9 @@ include_once "acesscontrol.php";
 
     if($value){
     $htmlbody = <<<ENDBODY
-    <div class="card1">
+    <div class="card1" id="card1-ided">
     <div class="card-header">
-    Your Sucessful Products
+    Your Products
     </div>
     ENDBODY;
 
@@ -57,10 +57,14 @@ include_once "acesscontrol.php";
     $result = $conn->query($sql);
 
     while($row = $result->fetch_assoc()){
+        $id = $row["m_goods_id"];
+        $value1 = $row["m_goods_name"];
+        $value2 = $row["m_goods_type"];
+
         $htmlbody = $htmlbody . <<<ENDBODY
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><label>Name : <input type="text" value="$value1 $value2" disabled></label></li>
-                <li class="list-group-item"><label>Location : <input type="text" value="$value3" disabled></label></li>
+                <li class="list-group-item"><label>Product Name : <input type="text" value="$value1" disabled></label></li>
+                <li class="list-group-item"><label>Product Type : <input type="text" value="$value3" disabled></label></li>
                 <li class="list-group-item"><a href=product.php?id='$id'>Go To your product</a></li>
             </ul>
         ENDBODY;
