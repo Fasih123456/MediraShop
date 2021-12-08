@@ -71,7 +71,7 @@
      }
 
 ?>
-
+<div class='main-banner' id='top'>
 <form method="post" action="">
 <div class="card1">
   <div class="card-header">
@@ -88,3 +88,4 @@
   </ul>
 </div>
 </form>
+</div>

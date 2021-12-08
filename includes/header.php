@@ -77,7 +77,7 @@
                         </li>
 
                         <li class='nav-item'><a class='nav-link' href='index.php?login=true'>Home</a></li>
-                        <li class='nav-item'><a class='nav-link' href='index.php'>Cart</a></li>
+                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>Cart</a></li>
 
                     </ul>
 

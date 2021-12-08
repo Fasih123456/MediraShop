@@ -11,22 +11,22 @@ require_once "includes/db.php"
 <?php
 
 if(isset($_SESSION["id"])){
-	include "includes/homepage.php";
+
+	if(isset($_GET['profile'])){
+		include "includes/profile.php";
+	}else{
+		include "includes/homepage.php";
+	}
 }else{
+	if(isset($_GET['register'])){
+		include "includes/register.php";
+	}else{
 	include "includes/login.php";
+	}
 }
 
-/*
-if(isset($_GET['login']) || !isset($_SESSION["id"])){
-	include "includes/login.php";
-}*
 
-if(isset($_GET['register'])){
-    include "includes/register.php";
-}
 
-if(isset($_GET['profile'])){
-    include "includes/profile.php";
-}*/
+
 require_once "includes/footer.php";
 ?>
