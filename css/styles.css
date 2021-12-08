@@ -57,3 +57,14 @@ img{
   margin-right: auto;
   width:26em;
 }
+
+@media only screen and (max-width: 768px){
+
+    .nav {
+        top: -70px; /* you'll have to figure out the exact number here */
+        position: static;
+        background-color: black;
+
+    }
+
+}
