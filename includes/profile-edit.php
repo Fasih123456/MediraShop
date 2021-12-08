@@ -1,4 +1,56 @@
-<?php include "header.php" ?>
+<?php
+    include_once "db.php";
+    include_once "header.php";
+
+        $id = $_SESSION["id"];
+
+        $sql = "SELECT * FROM m_account WHERE m_login_id=$id";
+
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+
+        $_SESSION["fname"] = $row["m_account_fname"];
+        $_SESSION["lname"] = $row["m_account_lname"];
+        $_SESSION["location"] = $row["m_account_location"];
+
+
+        $value1 = $_SESSION["fname"];
+        $value2 = $_SESSION["lname"];
+        $value3 = $_SESSION["location"];
+?>
+<div class='main-banner' id='top'>
+<?php
+
+    if(isset($_POST["submit"])){
+
+        $fname = sanitizeData($_POST["newfname"]);
+        $lname = sanitizeData($_POST["newlname"]);
+        $location = sanitizeData($_POST["newLocation"]);
+        $updated = false;
+  
+ 
+        $id = $_SESSION["id"];
+        if(!empty($fname)){
+            $sql = "UPDATE m_account SET m_account_fname='$fname' WHERE m_login_id='$id'";
+            $conn->query($sql);
+            $updated = true;
+        }
+
+        if(!empty($lname)){
+            $sql = "UPDATE m_account SET m_account_lname='$lname' WHERE m_login_id='$id'";
+            $conn->query($sql);
+            $updated = true;
+        }
+
+        if(!empty($location)){
+            $sql = "UPDATE m_account SET m_account_location='$location' WHERE m_login_id='$id'";
+            $conn->query($sql);
+            $updated = true;
+        }
+        header("Location: index.php?profile=true");
+    }
+?>
+
 
 <p>Please Enter the values which you would like to have changed, leave fields blank if you would not like to change them.</p>
 <form action="" method="POST">
@@ -18,39 +70,5 @@
 </div>
 </form>
 
-<?php
 
-    if(isset($_POST["submit"])){
-        $fname = sanitizeData($_POST["newfname"]);
-        $lname = sanitizeData($_POST["newlname"]);
-        $location = sanitizeData($_POST["newLocation"]);
-        $updated = false;
-
-        $id = $_SESSION["id"];
-        if(!empty($fname)){
-            $sql = "UPDATE m_account SET m_account_fname='$fname' WHERE m_login_id='$id'";
-            $conn->query($sql);
-            $updated = true;
-        }
-
-        if(!empty($lname)){
-            $sql = "UPDATE m_account SET m_account_lname='$lname' WHERE m_login_id='$id'";
-            $conn->query($sql);
-            $updated = true;
-        }
-
-        if(!empty($location)){
-            $sql = "UPDATE m_account SET m_account_location='$location' WHERE m_login_id='$id'";
-            $conn->query($sql);
-            $updated = true;
-        }
-
-        if($updated){
-            header("Location: ../index.php");
-            die();
-        }
-        
-    }
-
-    include_once "footer.php";
-?>
+</div>

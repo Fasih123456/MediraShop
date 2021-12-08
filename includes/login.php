@@ -11,12 +11,12 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
     $password = sanitizeData($_POST["password"]);
 
     $sql = "SELECT m_id,m_email,m_password FROM m_login WHERE m_email = '$email'";
-    echo $sql;
+
     
     $result = $conn->query($sql);
 
     if ($result->num_rows == 0) {
-        echo "<p>Incorrect username or password.</p>";
+        echo "<p class='error'>Incorrect username or password.</p>";
     } else {
         $row = $result->fetch_assoc();
         
@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
             die;
         }else{
 
-            echo "<p>Incorrect username or password.</p>";
+            echo "<p class='error'>Incorrect username or password.</p>";
         }
      }
 }

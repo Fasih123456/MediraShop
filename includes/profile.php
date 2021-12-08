@@ -15,11 +15,11 @@
 
 
         $value1 = $_SESSION["fname"];
-        $value2 = $_SESSION["fname"];
+        $value2 = $_SESSION["lname"];
         $value3 = $_SESSION["location"];
 ?>
 <div class='main-banner' id='top'>
-<form action="profile-edit.php" method="POST">
+<form action="" method="POST">
 <div class="card1">
   <div class="card-header">
   Account Information
@@ -31,6 +31,14 @@
   </ul>
 </div>
 </form>
+
+
+<?php
+    if(isset($_POST["submit"])){
+        header("Location: index.php?viewprofile=true");
+        die();
+    }
+?>
 
 <?php 
     $value = $row["m_seller"];
