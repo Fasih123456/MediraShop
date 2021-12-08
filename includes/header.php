@@ -62,7 +62,19 @@ include_once "acesscontrol.php";
                     <ul class="nav">
 
                         <li class='nav-item'>
-						<?php if(isset($_SESSION["id"])){?>
+                            
+						<?php 
+                        $value = strpos($_SERVER['REQUEST_URI'],'?') !== false;
+
+                        $isempty = 1;
+
+                        if(!empty($value)){
+                            $isempty = 0;
+                        }
+
+
+
+                        if(isset($_SESSION["id"]) && $isempty == 1){?>
                             <form class="form-inline my-2 my-lg-0" method="GET">
                                 <select list="searchTypes" name="searchTypes" id="searchTypes" placeholder="Filter">
                                     <option value="All Items">All</option>
