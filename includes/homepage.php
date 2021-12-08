@@ -93,15 +93,15 @@
 
             echo "<div class='item'>
                                   
-                                            <img src='" . $row['6']. "'>
+                                            <img src='" . $row[6]. "'>
                                       
                                             <div class='down-content'>
                                                     <h4>".$row[3]. "</h4>
-                                                    <span>$" . $row['5']. "</span>
+                                                    <span>$" . $row[5]. "</span>
                                                      <div class='hover-content'>
                                                             <ul>
                                                             
-                                                                    <li><a href='includes/product.php'> <i class='fa fa-shopping-cart'></i></a></li>
+                                                                    <li><a href='includes/index.php?products=" . $row[0]. "'> <i class='fa fa-shopping-cart'></i></a></li>
                                                             </ul>
                                                     </div>
                                             </div>
