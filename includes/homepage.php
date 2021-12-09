@@ -52,21 +52,19 @@
                         <div class='row'>";
                 }
 
+               
                 echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
-                                  
-                                            <img src='" . $row['6']. "'>
-                                      
-                                            <div class='down-content'>
-                                                    <h4>".$row[3]. "</h4>
-                                                    <span>$" . $row['5']. "</span>
-                                                     <div class='hover-content'>
-                                                            <ul>
-                                                            
-                                                                    <li><i class='fa fa-shopping-cart'></i></a></li>
-                                                            </ul>
-                                                    </div>
-                                            </div>
-                            </div>";
+                        <img src='" . $row['6']. "'>
+                            <div class='down-content'>
+                                <h4>".$row[3]. "</h4>
+                                    <span>$" . $row['5']. "</span>
+                                        <div class='hover-content'>
+                                            <ul>       
+                                              <li> <i class='fa fa-shopping-cart'></i></a></li>
+                                            </ul>
+                                         </div>
+                                    </div>
+                        </div>";
                 $counter++;
             }
 
@@ -96,21 +94,19 @@
                         <div class='row'>";
             }
 
+          
             echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
-                                  
-                                            <img src='" . $row[6]. "'>
-                                      
-                                            <div class='down-content'>
-                                                    <h4>".$row[3]. "</h4>
-                                                    <span>$" . $row[5]. "</span>
-                                                     <div class='hover-content'>
-                                                            <ul>
-                                                            
-                                                                    <li><i class='fa fa-shopping-cart'></i></a></li>
-                                                            </ul>
-                                                    </div>
-                                            </div>
-                            </div>";
+            <img src='" . $row['6']. "'>
+                <div class='down-content'>
+                    <h4>".$row[3]. "</h4>
+                        <span>$" . $row['5']. "</span>
+                            <div class='hover-content'>
+                                <ul>       
+                                  <li> <i class='fa fa-shopping-cart'></i></a></li>
+                                </ul>
+                             </div>
+                        </div>
+            </div>";
             $counter++;
         }
 
