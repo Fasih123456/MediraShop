@@ -54,7 +54,7 @@
 
                
                 echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
-                        <img src='" . $row['6']. "'>
+                        <img src='" . $row['6']. "' alt='" . $row['3']. "'>
                             <div class='down-content'>
                                 <h4>".$row[3]. "</h4>
                                     <span>$" . $row['5']. "</span>
@@ -96,7 +96,7 @@
 
           
             echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
-            <img src='" . $row['6']. "'>
+            <img src='" . $row['6']. "' alt='" . $row['3']. "'>
                 <div class='down-content'>
                     <h4>".$row[3]. "</h4>
                         <span>$" . $row['5']. "</span>
