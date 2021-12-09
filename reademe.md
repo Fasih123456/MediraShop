@@ -21,7 +21,7 @@ Adbullah Al Mukaddim       B00804319 ab845312@dal.ca	URL: https://web.cs.dal.ca/
 ZhenYu Lei 	               B00838408 zh772515@dal.ca	URL: https://web.cs.dal.ca/~
 Nathaniel Wilson           B00834477 nt680476@dal.ca	URL: https://web.cs.dal.ca/~nwilson/
 Fasih Ul Islam             B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/~
-Dorian Germain Zambo Zambo B00XXXXXX dr704046@dal.ca	URL: https://web.cs.dal.ca/~
+Dorian Germain Zambo Zambo B00868016 dr704046@dal.ca	URL: https://web.cs.dal.ca/~
 
 Login Information:
 		user@mail.com
