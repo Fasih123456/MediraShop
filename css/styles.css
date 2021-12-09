@@ -1,9 +1,7 @@
 img {
-  width: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  width: 300px;
+  height: 300px;
 }
-<<<<<<< HEAD
 .item{
 
   border: 1px solid lightgrey;
@@ -13,10 +11,6 @@ img {
 }
 #search{
     padding-right: 200px;
-=======
-#search {
-  padding-right: 200px;
->>>>>>> facb31caa7f752da1ff70138aa1e0ece109753b2
 }
 #searchTypes {
   max-width: 200px;
