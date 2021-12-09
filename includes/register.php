@@ -6,6 +6,7 @@
 <div class='main-banner' id='top'>
 <?php
 include_once "acesscontrol.php";
+include_once "header.php";
     include_once "db.php";
 
     if(isset(($_POST['register']))){
@@ -24,9 +25,11 @@ include_once "acesscontrol.php";
         if($value == 0){//meaning regex pattren is not valid
 			echo "<p class='error'>Password is not strong enough</p>";
             echo "<p class='error'>Enter a password with at least 1 captial letter, 1 small letter, 1 special character and 1 letter, Ex:Post@123 </p> ";
-		}
+		}else{
+            hashPassword($password);
+        }
 
-        hashPassword($password);
+       
     }
 
     function hashPassword($password){
@@ -37,8 +40,8 @@ include_once "acesscontrol.php";
     function userType($hashedPassword){
         $usertype = $_POST["usertype"];
 
-		if($usertype != "admin" && $usertype != "user" && $usertype != "seller"){//if drop box/check box is used then this code can be deleted
-			echo "<p class='error'>Invalid user type</p>";
+		if($usertype != "user" && $usertype != "seller"){//if drop box/check box is used then this code can be deleted
+			echo "<p class='error'>Invalid user type, user must either be a seller or user</p>";
 		}else{
             $uservalue = 0;
             if($usertype == "seller"){
@@ -57,11 +60,12 @@ include_once "acesscontrol.php";
 
 
         $value = $_SESSION["value"];
-        
+        echo $_SESSION["value"];
+        echo $value;
         $sql = "INSERT INTO m_account  (m_account_fname, m_account_lname, m_login_id, m_account_location, m_seller) VALUES ('$fname','$lname','$value','$accountLocation','$uservalue')";
 		$sql2 = "INSERT INTO m_login (m_id, m_email, m_password) VALUES ('$value','$email','$hashedPassword')";
 
-        $_SESSION["value"] = $_SESSION["value"] + 1;
+        
 
         //db.php was not working here for some reason
         $host = "localhost";
@@ -69,12 +73,15 @@ include_once "acesscontrol.php";
         $password = "root";
         $dbname = "merida";
         
-        $conn = new mysqli($host, $username, $password, $dbname);
-        $conn->query($sql);
-        $conn->query($sql2);
+        echo $sql;
+        echo $sql2;
 
-        header("Location: index.php");
-        //header("Location: index.php?login=true");
+        $conn = new mysqli($host, $username, $password, $dbname);
+        $conn->query($sql2);
+        $conn->query($sql);
+        $_SESSION["value"] = $_SESSION["value"] + 1;
+
+        header("Location: index.php?login=true");
         die();
      }
 

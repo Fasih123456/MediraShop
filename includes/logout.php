@@ -5,7 +5,6 @@
 -->
 
 <?php
-include_once "acesscontrol.php";
 
 /*Zybooks code was used for this assigment
    Date acessed: 25 Nov 2021

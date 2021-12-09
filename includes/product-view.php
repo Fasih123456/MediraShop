@@ -3,6 +3,7 @@
 	 product-view.php
 	 Author: Adbullah Al Mukaddim
 -->
+<div class='main-banner' id='top'>
 <?php
 include_once "acesscontrol.php";
 $htmlBody = <<<ENDBODY
@@ -58,3 +59,4 @@ ENDBODY;
 
 echo $htmlBody . PHP_EOL;
 ?>
+</div>

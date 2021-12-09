@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){//if login button is clicked this if statment is exc
         if(password_verify($password, $row["m_password"])){//if hashed passwords are being used then change this to password_verify($password, $row["e_password"])
             $_SESSION["email"] = $email;
             $_SESSION["id"] = $row["m_id"];
-            $_SESSION['value'] = 0;
+
 
             //first name,location and last name are also available in another file as session values.
             header("Location: index.php");

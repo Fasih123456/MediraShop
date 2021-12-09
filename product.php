@@ -1,3 +1,8 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 product.php
+	 Author: Adbullah Al Mukaddim
+-->
 <?php
     require_once "includes/db.php";
 	require_once "includes/header.php";

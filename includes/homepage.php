@@ -52,21 +52,21 @@
                         <div class='row'>";
                 }
 
-                echo "<div class='item'>
-                        <a href='product.php?id={$row['m_goods_id']}'>         
-                            <img src='" . $row['6']. "'>
-
-                            <div class='down-content'>
-                            <h4>".$row[3]. "</h4>
-                            <span>$" . $row['5']. "</span>
-                            <div class='hover-content'>
-                                <ul>
-                                    <li><i class='fa fa-shopping-cart'></i></li>
-                                </ul>
-                            </div>
-                            </div>
-                        </a>
-                    </div>";
+                echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
+                                  
+                                            <img src='" . $row['6']. "'>
+                                      
+                                            <div class='down-content'>
+                                                    <h4>".$row[3]. "</h4>
+                                                    <span>$" . $row['5']. "</span>
+                                                     <div class='hover-content'>
+                                                            <ul>
+                                                            
+                                                                    <li><i class='fa fa-shopping-cart'></i></a></li>
+                                                            </ul>
+                                                    </div>
+                                            </div>
+                            </div>";
                 $counter++;
             }
 
@@ -96,7 +96,7 @@
                         <div class='row'>";
             }
 
-            echo "<div class='item'>
+            echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
                                   
                                             <img src='" . $row[6]. "'>
                                       
@@ -106,7 +106,7 @@
                                                      <div class='hover-content'>
                                                             <ul>
                                                             
-                                                                    <li><a href='includes/index.php?products=" . $row[0]. "'> <i class='fa fa-shopping-cart'></i></a></li>
+                                                                    <li><i class='fa fa-shopping-cart'></i></a></li>
                                                             </ul>
                                                     </div>
                                             </div>
