@@ -27,7 +27,7 @@ include_once "acesscontrol.php";
 <div class='main-banner' id='top'>
 <form action="" method="POST">
 <div class="card1">
-  <div class="card-header">
+  <div class="card-header1">
   Account Information
   </div>
   <ul class="list-group list-group-flush">
@@ -52,7 +52,7 @@ include_once "acesscontrol.php";
     if($value){
     $htmlbody = <<<ENDBODY
     <div class="card1" id="card1-ided">
-    <div class="card-header">
+    <div class="card-header1">
     Your Products
     </div>
     ENDBODY;
