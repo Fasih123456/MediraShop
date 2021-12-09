@@ -5,14 +5,14 @@
 	 Author: Adbullah Al Mukaddim
 -->
 <?php
-include_once "acesscontrol.php";
+//include_once "acesscontrol.php";
 $htmlBody = <<<ENDBODY
 <div class="product-section">
     <div class="card">
         <div class="card-body">
             <h3>Create Product</h3>
             <div class="product-edit">
-                <form action="includes/process-form.php" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Product Name:</label>
                         <input class="col-sm-8 form-control" type="text" name="p-name">
@@ -49,4 +49,6 @@ $htmlBody = <<<ENDBODY
 </div>
 ENDBODY;
 echo $htmlBody . PHP_EOL;
+
+include_once "process-form.php";
 ?>

@@ -20,9 +20,9 @@ include_once "acesscontrol.php";
         $_SESSION["location"] = $row["m_account_location"];
 
 
-        $value1 = $_SESSION["fname"];
-        $value2 = $_SESSION["lname"];
-        $value3 = $_SESSION["location"];
+        $firstName = $_SESSION["fname"];
+        $lastname = $_SESSION["lname"];
+        $location = $_SESSION["location"];
 ?>
 <div class='main-banner' id='top'>
 <?php
@@ -61,13 +61,13 @@ include_once "acesscontrol.php";
 <p>Please Enter the values which you would like to have changed, leave fields blank if you would not like to change them.</p>
 <form action="" method="POST">
 <div class="card1" id="profile-edit">
-  <div class="card-header">
+  <div class="card-header1">
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><label>Origional First Name : <input type="text" name="fname" value="<?php echo $value1 ?>" disabled></label></li>
-    <li class="list-group-item"><label>Origional Last Name : <input type="text" name="lname" value="<?php echo $value2 ?>" disabled></label></li>
-    <li class="list-group-item"><label>Origional Location : <input type="text" name="Location" value="<?php echo $value3 ?>" disabled></label></li>
+    <li class="list-group-item"><label>Origional First Name : <input type="text" name="fname" value="<?php echo $firstName ?>" disabled></label></li>
+    <li class="list-group-item"><label>Origional Last Name : <input type="text" name="lname" value="<?php echo $lastname ?>" disabled></label></li>
+    <li class="list-group-item"><label>Origional Location : <input type="text" name="Location" value="<?php echo $location ?>" disabled></label></li>
     <li class="list-group-item"><label>New First Name : <input type="text" name="newfname" placeholder="first name"></label></li>
     <li class="list-group-item"><label>New Last Name : <input type="text" name="newlname" placeholder="last name"></li>
     <li class="list-group-item">New Location : <input type="text" name="newLocation" placeholder="Location"></label></li>

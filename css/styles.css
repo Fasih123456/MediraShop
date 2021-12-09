@@ -1,8 +1,9 @@
-img{
-    width:100%;
-    max-width:400px;
-    max-height: 400px;
+img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
 }
+<<<<<<< HEAD
 .item{
 
   border: 1px solid lightgrey;
@@ -12,10 +13,14 @@ img{
 }
 #search{
     padding-right: 200px;
+=======
+#search {
+  padding-right: 200px;
+>>>>>>> facb31caa7f752da1ff70138aa1e0ece109753b2
 }
-#searchTypes{
-    max-width: 200px;
-    margin-right: 20px;
+#searchTypes {
+  max-width: 200px;
+  margin-right: 20px;
 }
 .card {
   margin-top: 20px;
@@ -25,6 +30,7 @@ img{
 .product-section {
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 150px;
 }
 .product-img {
   width: 350px;
@@ -48,21 +54,22 @@ img{
 .checkout-section {
   margin-left: 2%;
   margin-right: 2%;
+  margin-top: 150px;
 }
 
-
-.card1, .card-header{
+.card1,
+.card-header1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:24em;
+  width: 24em;
 }
-#profile-edit{
-
+#profile-edit {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:26em;
+  width: 26em;
+}
 
 .top-space {
   margin-top: 200px;
@@ -72,22 +79,19 @@ img{
   background-color: #d3d3d3;
 }
 
-.error{
+.error {
   color: red;
 }
 
-@media only screen and (max-width: 768px){
-
-    .nav {
-        top: -70px; /* you'll have to figure out the exact number here */
-        position: static;
-        background-color: black;
-
-    }
-
+@media only screen and (max-width: 768px) {
+  .nav {
+    top: -70px; /* you'll have to figure out the exact number here */
+    position: static;
+    background-color: black;
+  }
 }
 
-#card1-ided{
+#card1-ided {
   margin-top: 30px;
   padding-top: 30px;
 }

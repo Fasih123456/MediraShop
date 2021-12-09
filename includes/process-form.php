@@ -5,8 +5,7 @@
 -->
 <?php
 include_once "acesscontrol.php";
-    require_once "db.php";
-	require_once "functions.php";
+require_once "functions.php";
 
 if (isset($_POST['createProduct'])) {
 
@@ -30,7 +29,7 @@ if (isset($_POST['createProduct'])) {
     echo $querySQL;
     $conn->query($querySQL);
 
-    header("Location: ../index.php");
+    header("Location: index.php");
 
 }
 if (isset($_POST['editProduct'])) {
@@ -48,7 +47,7 @@ if (isset($_POST['editProduct'])) {
     echo $querySQL;
     $conn->query($querySQL);
 
-    header("Location: ../index.php");
+    header("Location: index.php");
 }
 
 if (isset($_POST['deleteProduct'])){
@@ -57,7 +56,7 @@ if (isset($_POST['deleteProduct'])){
     echo $querySQL;
     $conn->query($querySQL);
 
-    header("Location: ../index.php");
+    header("Location: index.php");
 }
 
 ?>

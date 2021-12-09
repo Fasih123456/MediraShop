@@ -17,7 +17,7 @@ $htmlBody = <<<ENDBODY
         <div class="card-body">
             <h3>Edit Product</h3>
             <div class="product-edit">
-                <form action="includes/process-form.php" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Product Name:</label>
                         <input class="col-sm-8" type="text" class="form-control" name="p-name" value="{$row['m_goods_name']}">
@@ -55,4 +55,7 @@ $htmlBody = <<<ENDBODY
 </div>
 ENDBODY;
 echo $htmlBody . PHP_EOL;
+
+include_once "process-form.php";
+
 ?>
