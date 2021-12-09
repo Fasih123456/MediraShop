@@ -58,10 +58,10 @@ include_once "acesscontrol.php";
 ?>
 
 
-<p>Please Enter the values which you would like to have changed, leave fields blank if you would not like to change them.</p>
 <form action="" method="POST">
-<div class="card1" id="profile-edit">
-  <div class="card-header1">
+<div class="card card1" id="profile-edit">
+<p>Please Enter the values which you would like to have changed, leave fields blank if you would not like to change them.</p>
+  <div class="card-header card-header1">
     Featured
   </div>
   <ul class="list-group list-group-flush">

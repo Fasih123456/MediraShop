@@ -26,14 +26,17 @@ include_once "acesscontrol.php";
 ?>
 <div class='main-banner' id='top'>
 <form action="" method="POST">
-<div class="card1">
-  <div class="card-header1">
+<div class="card card card1">
+  <div class="card-header card-header card-header1">
   Account Information
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><label>Name : <input type="text" value="<?php echo $value1 . " " . $value2?>" disabled></label></li>
     <li class="list-group-item"><label>Location : <input type="text" value="<?php echo $value3?>" disabled></label></li>
-    <li class="list-group-item"><input type="submit" name="submit" value="Edit Account Information"></li>
+    <li class="list-group-item">
+        <input type="submit" name="submit" value="Edit Account Information"/>
+        <button style="margin-top: 10px"><a href='product.php?create=True'>Create Product</a></button>
+    </li>
   </ul>
 </div>
 </form>
@@ -51,8 +54,8 @@ include_once "acesscontrol.php";
 
     if($value){
     $htmlbody = <<<ENDBODY
-    <div class="card1" id="card1-ided">
-    <div class="card-header1">
+    <div class="card card1" id="card card1-ided">
+    <div class="card-header card-header1">
     Your Products
     </div>
     ENDBODY;

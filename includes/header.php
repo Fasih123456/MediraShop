@@ -73,7 +73,7 @@ include_once "acesscontrol.php";
                             $isempty = 0;
                         }
 
-                        if($_GET['search'] ||  $_GET['searchTypes'] ||  !empty($productView)){
+                        if(isset($_GET['search']) or isset($_GET['searchTypes']) or !empty($productView)){
                             $isempty = 1;
                         }
 

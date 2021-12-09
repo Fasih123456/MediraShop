@@ -40,7 +40,7 @@ include_once "header.php";
     function userType($hashedPassword){
         $usertype = $_POST["usertype"];
 
-		if($usertype != "user" && $usertype != "seller"){//if drop box/check box is used then this code can be deleted
+		if($usertype != "buyer" && $usertype != "seller"){//if drop box/check box is used then this code can be deleted
 			echo "<p class='error'>Invalid user type, user must either be a seller or user</p>";
 		}else{
             $uservalue = 0;
@@ -88,8 +88,8 @@ include_once "header.php";
 ?>
 
 <form method="post" action="">
-<div class="card1">
-  <div class="card-header1">
+<div class="card card1">
+  <div class="card-header card-header1">
   Enter Your Registration Information!
   </div>
   <ul class="list-group list-group-flush">
@@ -98,7 +98,12 @@ include_once "header.php";
     <li class="list-group-item"><label>Email Address: <input type="email" name="username" autofocus required></label></li>
     <li class="list-group-item"><label>Password: <input type="password" name="password" required></label></li>
     <li class="list-group-item"><label>Location: <input type="text" name="location" autofocus required></label></li>
-    <li class="list-group-item"><label>User type: <input type="dropdown" name="usertype" required></label></li>
+    <li class="list-group-item"><label>User type: 
+        <select name="usertype">
+            <option value="seller">Seller</option>
+            <option value="buyer">Buyer</option>
+        </select>
+    </label></li>
     <li class="list-group-item"><input type="submit" name="register" value="Register"></li>
   </ul>
 </div>
