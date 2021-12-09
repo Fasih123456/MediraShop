@@ -82,7 +82,7 @@ include_once "acesscontrol.php";
 
 <form method="post" action="">
 <div class="card1">
-  <div class="card-header">
+  <div class="card-header1">
   Enter Your Registration Information!
   </div>
   <ul class="list-group list-group-flush">

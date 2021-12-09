@@ -53,20 +53,20 @@
                 }
 
                 echo "<div class='item'>
-                                  
-                                            <img src='" . $row['6']. "'>
-                                      
-                                            <div class='down-content'>
-                                                    <h4>".$row[3]. "</h4>
-                                                    <span>$" . $row['5']. "</span>
-                                                     <div class='hover-content'>
-                                                            <ul>
-                                                            
-                                                                    <li><a href='includes/product.php'> <i class='fa fa-shopping-cart'></i></a></li>
-                                                            </ul>
-                                                    </div>
-                                            </div>
-                            </div>";
+                        <a href='product.php?id={$row['m_goods_id']}'>         
+                            <img src='" . $row['6']. "'>
+
+                            <div class='down-content'>
+                            <h4>".$row[3]. "</h4>
+                            <span>$" . $row['5']. "</span>
+                            <div class='hover-content'>
+                                <ul>
+                                    <li><i class='fa fa-shopping-cart'></i></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </a>
+                    </div>";
                 $counter++;
             }
 
