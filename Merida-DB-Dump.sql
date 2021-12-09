@@ -13,8 +13,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `merida`
 --
-CREATE DATABASE IF NOT EXISTS `merida` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `merida`;
+
+USE `zambo`;
 
 -- --------------------------------------------------------
 
