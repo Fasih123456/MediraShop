@@ -1,8 +1,15 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 product-view.php
+	 Author: Adbullah Al Mukaddim
+-->
+<div class='main-banner' id='top'>
 <?php
+include_once "acesscontrol.php";
 $htmlBody = <<<ENDBODY
 <div class="product-section row">
     <div class="product-header col-lg-4">
-        <img class="product-img" src="{$row['m_goods_imagePath']}"/>
+        <img class="product-img" src="{$row['m_goods_imagePath']}" alt="{$row['m_goods_name']}"/>
         <h3>{$row['m_goods_name']}</h3>
         <p>Price: \${$row['m_goods_price']}</p>
         <button>Add to cart</button>
@@ -52,3 +59,4 @@ ENDBODY;
 
 echo $htmlBody . PHP_EOL;
 ?>
+</div>

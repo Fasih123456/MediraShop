@@ -4,7 +4,7 @@ Project Details: Merida Shop
 This makes the website act more as a medium of exchange rather than a store on its own. In order to accommodate this our
 website offers a whole host of features including different types of users. When a user first registers, they are given 
 the option to select whether they are a buyer or a seller. From there, sellers will be given the option to post new 
-products and edit any existing product post that is theirs. Everyone is given the opportunity to buy products. Once 
+products and edit any existing product post that is theirs from the profile page. Everyone is given the opportunity to buy products. Once 
 logged in they are directed to the main homepage which offers the ability to search for products using the search 
 bar and or with the filter drop down menu. From the navigation bar they may also select to view their profile or logout. 
 On the homepage each product is given a small panel from which a user can see an image, name and price of the item and 
@@ -17,13 +17,58 @@ and click submit, which will then return them to the homepage.
 
 Members:
 
-Adbullah Al Mukaddim      B00XXXXXX ab845312@dal.ca	URL: https://web.cs.dal.ca/~
-ZhenYu Lei 	          B00XXXXXX zh772515@dal.ca	URL: https://web.cs.dal.ca/~
-Nathaniel Wilson          B00834477 nt680476@dal.ca	URL: https://web.cs.dal.ca/~nwilson/
-Fasih Ul Islam            B00XXXXXX fs272918@dal.ca	URL: https://web.cs.dal.ca/~
-Dorian Germain Zambo Zamb B00XXXXXX dr704046@dal.ca	URL: https://web.cs.dal.ca/~
+Adbullah Al Mukaddim       B00804319 ab845312@dal.ca	URL: https://web.cs.dal.ca/~
+ZhenYu Lei 	               B00838408 zh772515@dal.ca	URL: https://web.cs.dal.ca/~
+Nathaniel Wilson           B00834477 nt680476@dal.ca	URL: https://web.cs.dal.ca/~nwilson/
+Fasih Ul Islam             B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/~
+Dorian Germain Zambo Zambo B00868016 dr704046@dal.ca	URL: https://web.cs.dal.ca/~
+
+Login Information:
+	Sellers and Buyers:
+		Username: Abdullah@mail.com
+		Password: Post@123
+
+		Username: Nathaniel@mail.com
+		Password: Post@123
+		
+		Username: Fasih@mail.com
+		Password: Post@123
+
+	Buyers:
+
+		Username: ZhenYu@mail.com
+		Password: Post@123
+
+		Username: Dorian@mail.com
+		Password: Post@123
 
 Citations:
+1. Bootstrap for main layout (header, footer, homepage)
+   URL: https://templatemo.com/tm-571-hexashop
+   Author: MIT License on github https://github.com/twbs/bootstrap/blob/main/LICENSE
+   Date Accessed: 12/06/2021
+2. Zybooks logout code
+   URL: https://www.zybooks.com/, chapter 8
+   Date acessed: 25 Nov 2021
+3. Image uploading
+   URL: https://www.w3schools.com/PHP/php_file_upload.asp
+   Date: December 6, 2021
+4. Access control file
+   From: CSCI 2170 Assignment 4
+   Author: Raghav Sampangi
+5. Image Chair
+   From: https://m.media-amazon.com/images/I/81J5r9dANGL._SL1500_.jpg
+6. Image Scarf
+   From: https://cdn11.bigcommerce.com/s-5b70d/images/stencil/1280x1280/products/786/5631/Baby-Alpaca-Mens-Color-Block-Scarf-Blue-Grey-by-Inca-Fashions-for-Sun-Valley-Alpaca-Loop__42287.1572118643.jpg?c=3?imbypass=on
+7: Image Orange
+   From: https://media.istockphoto.com/photos/orange-picture-id185284489?b=1&k=20&m=185284489&s=170667a&w=0&h=a_fCXMop7ZX1V1yoQDYQeIwZTwIei3UjOmmRItszleY=
+8: Image Giftcard
+   From: https://www.istockphoto.com/photo/gift-card-isolated-gm1147628749-309648977
+9: Image T-shirt
+   From: https://img1.g-star.com/product/c_fill,f_auto,h_630,q_80/v1614686111/D14143-336-6484-M05/g-star-raw-raw-graphic-slim-t-shirt-black.jpg
+10: Image Phone
+    From: https://m.media-amazon.com/images/I/81-fNmQqlLL._AC_SX522_.jpg
+
 
 
 Contributions:
@@ -31,13 +76,13 @@ Contributions:
 Adbullah Al Mukaddim:
 	a) Planning: How to use the website, user stories, document layout, organized who does what
 	b) Design: Product create, remove, update and details (CRUD) design layouts for both mobile and desktop, organized who does what
-	c) Development:Item CRUD: product-view.php, product-create.php, product-edit.php, images folder, as well as helping on the 
+	c) Development:Item CRUD: product.php, product-view.php, product-create.php, product-edit.php, images folder, as well as helping on the 
 	implementation of many of the other parts and organizing how everything should come together. 
 
 ZhenYu Lei:
 	a) Planning: How to use the website, goals and types of users
 	b) Design: Review and pay design layouts for both mobile and desktop
-	c) Development: card.php, payment processing 
+	c) Development: card.php, checkout.php
 
 
 Nathaniel Wilson:

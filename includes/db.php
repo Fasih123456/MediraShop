@@ -1,4 +1,10 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 db.php
+	 Author: Nathaniel Wilson
+-->
 <?php
+include_once "acesscontrol.php";
 /*
  *	db.php
  *	Connects to the Database on localhost.

@@ -1,4 +1,11 @@
+
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 footer.php
+	 Author: Dorian Germain Zambo Zambo
+-->
 <?php
+include_once "acesscontrol.php";
 ?>
 	<!-- Footer for the web page -->
 		 <!-- ***** Footer Start ***** -->
@@ -13,10 +20,7 @@
 
                         <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a></p>
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="contact.php"><h3>Contact Us</h3></a></li>
                         </ul>
                     </div>
                 </div>

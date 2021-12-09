@@ -1,7 +1,13 @@
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 header.php
+	 Author: Nathaniel Wilson and Dorian Germain Zambo Zambo
+-->
 <?php
-	require_once "includes/db.php";
+include_once "acesscontrol.php";
+	include_once "includes/db.php";
 	session_start();
-
+    $_SESSION["value"] = 5;
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +62,24 @@
                     <ul class="nav">
 
                         <li class='nav-item'>
+                            
+						<?php 
+                        $hasQuestionMark = strpos($_SERVER['REQUEST_URI'],'?') !== false;
+                        $productView = strpos($_SERVER['REQUEST_URI'],'product.php') !== false;
+
+                        $isempty = 1;
+
+                        if(!empty($hasQuestionMark)){
+                            $isempty = 0;
+                        }
+
+                        if(isset($_GET['search']) or isset($_GET['searchTypes']) or !empty($productView)){
+                            $isempty = 1;
+                        }
+
+
+
+                        if(isset($_SESSION["id"]) && $isempty == 1){?>
                             <form class="form-inline my-2 my-lg-0" method="GET">
                                 <select list="searchTypes" name="searchTypes" id="searchTypes" placeholder="Filter">
                                     <option value="All Items">All</option>
@@ -76,9 +100,11 @@
                             </form>
                         </li>
 
-                        <li class='nav-item'><a class='nav-link' href='index.php?login=true'>Home</a></li>
-                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>Cart</a></li>
+						
 
+                        <li class='nav-item'><a class='nav-link' href='index.php?profile=true'>View Profile</a></li>
+						<li class='nav-item'><a class='nav-link' href='includes/logout.php'>Logout</a></li>
+						<?php }?>
                     </ul>
 
                     <a class='menu-trigger'>

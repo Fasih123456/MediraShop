@@ -1,7 +1,12 @@
-
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 homepage.php
+	 Author: Nathaniel Wilson and Dorian Germain Zambo Zambo
+-->
 <div class='main-banner' id='top'>
 
     <?php
+    include_once "acesscontrol.php";
     if (isset($_GET['search'])) {
 
         $search_value = $_GET["search"];
@@ -47,21 +52,19 @@
                         <div class='row'>";
                 }
 
-                echo "<div class='item'>
-                                  
-                                            <img src='" . $row['6']. "'>
-                                      
-                                            <div class='down-content'>
-                                                    <h4>".$row[3]. "</h4>
-                                                    <span>$" . $row['5']. "</span>
-                                                     <div class='hover-content'>
-                                                            <ul>
-                                                            
-                                                                    <li><a href='includes/product.php'> <i class='fa fa-shopping-cart'></i></a></li>
-                                                            </ul>
-                                                    </div>
-                                            </div>
-                            </div>";
+               
+                echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
+                        <img src='" . $row['6']. "' alt='" . $row['3']. "'>
+                            <div class='down-content'>
+                                <h4>".$row[3]. "</h4>
+                                    <span>$" . $row['5']. "</span>
+                                        <div class='hover-content'>
+                                            <ul>       
+                                              <li> <i class='fa fa-shopping-cart'></i></a></li>
+                                            </ul>
+                                         </div>
+                                    </div>
+                        </div>";
                 $counter++;
             }
 
@@ -91,21 +94,19 @@
                         <div class='row'>";
             }
 
-            echo "<div class='item'>
-                                  
-                                            <img src='" . $row[6]. "'>
-                                      
-                                            <div class='down-content'>
-                                                    <h4>".$row[3]. "</h4>
-                                                    <span>$" . $row[5]. "</span>
-                                                     <div class='hover-content'>
-                                                            <ul>
-                                                            
-                                                                    <li><a href='includes/index.php?products=" . $row[0]. "'> <i class='fa fa-shopping-cart'></i></a></li>
-                                                            </ul>
-                                                    </div>
-                                            </div>
-                            </div>";
+          
+            echo "<div class='item'><a href='product.php?id=" . $row[0]. "'>
+            <img src='" . $row['6']. "' alt='" . $row['3']. "'>
+                <div class='down-content'>
+                    <h4>".$row[3]. "</h4>
+                        <span>$" . $row['5']. "</span>
+                            <div class='hover-content'>
+                                <ul>       
+                                  <li> <i class='fa fa-shopping-cart'></i></a></li>
+                                </ul>
+                             </div>
+                        </div>
+            </div>";
             $counter++;
         }
 

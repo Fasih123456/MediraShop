@@ -1,14 +1,20 @@
-img{
-    width:100%;
-    max-width:400px;
-    max-height: 400px;
+img {
+  width: 300px;
+  height: 300px;
+}
+.item{
+
+  border: 1px solid lightgrey;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
 }
 #search{
     padding-right: 200px;
 }
-#searchTypes{
-    max-width: 200px;
-    margin-right: 20px;
+#searchTypes {
+  max-width: 200px;
+  margin-right: 20px;
 }
 .card {
   margin-top: 20px;
@@ -18,6 +24,7 @@ img{
 .product-section {
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 150px;
 }
 .product-img {
   width: 350px;
@@ -41,30 +48,44 @@ img{
 .checkout-section {
   margin-left: 2%;
   margin-right: 2%;
+  margin-top: 150px;
 }
 
-/*
-.card1, .card-header{
+.card1,
+.card-header1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:24em;
-}*/
-#profile-edit{
-
+  width: 24em;
+}
+#profile-edit {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:26em;
+  width: 26em;
 }
 
-@media only screen and (max-width: 768px){
+.top-space {
+  margin-top: 200px;
+}
 
-    .nav {
-        top: -70px; /* you'll have to figure out the exact number here */
-        position: static;
-        background-color: black;
+.bg-dark {
+  background-color: #d3d3d3;
+}
 
-    }
+.error {
+  color: red;
+}
 
+@media only screen and (max-width: 768px) {
+  .nav {
+    top: -70px; /* you'll have to figure out the exact number here */
+    position: static;
+    background-color: black;
+  }
+}
+
+#card1-ided {
+  margin-top: 30px;
+  padding-top: 30px;
 }

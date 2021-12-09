@@ -1,14 +1,22 @@
-<?php 
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 product-processing.php
+	 Author: Adbullah Al Mukaddim
+-->
+
+<?php
+//include_once "acesscontrol.php";
      /* 
     Image upload code take and modified from: https://www.w3schools.com/PHP/php_file_upload.asp
     Date: December 6, 2021
     */
     if(isset($_FILES["p-image"])){
-        $target_dir = "../images/";
+        $target_dir = "images/";
         $ext = "." . explode(".", $_FILES["p-image"]["name"])[1];
         $target_file = $target_dir . $_POST['p-name'] . $ext;    
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        echo $target_file;
 
         $check = getimagesize($_FILES["p-image"]["tmp_name"]);
         if($check !== false) {
@@ -42,7 +50,7 @@
     // prepare data for DB storage
     $pName = sanitizeData($_POST['p-name']);
     $pPrice = floatval(sanitizeData($_POST['p-price']));
-    $pImagePath = "images/" . $pName . ".jpg";
+    $pImagePath = "images/" . $pName . $ext;
     $pCategory = sanitizeData($_POST['p-category']);
     $pAccountId = intval(sanitizeData($_POST['p-accountId']));
     $pDescription = sanitizeData($_POST['p-description']);

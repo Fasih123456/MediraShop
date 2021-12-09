@@ -1,4 +1,8 @@
-
+<!--
+	 CSCI 2170: Fall 2021, Group Project
+	 index.php
+	 Author: Adbullah Al Mukaddim
+-->
 <?php
 require_once "includes/header.php";
 
@@ -14,7 +18,10 @@ if(isset($_SESSION["id"])){
 
 	if(isset($_GET['profile'])){
 		include "includes/profile.php";
-	}else{
+	}else if(isset($_GET['viewprofile'])){
+		include "includes/profile-edit.php";
+	}
+	else{
 		include "includes/homepage.php";
 	}
 }else{
