@@ -33,7 +33,7 @@ CREATE TABLE `m_login` (
 --
 -- Dumping data for table `m_login`
 --
---Default password is Post@123
+-- Default password is Post@123
 INSERT INTO `m_login` (`m_id`, `m_email`, `m_password`) VALUES
 (1, 'user@mail.com', '$2y$10$9DRkxzSH1O1KvxHIoykjyOAshB0xhbl8tcmOKxCnpSrTqIlZs6WeC'),
 (2, 'user2@mail.com', '$2y$10$9DRkxzSH1O1KvxHIoykjyOAshB0xhbl8tcmOKxCnpSrTqIlZs6WeC'),

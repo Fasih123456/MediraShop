@@ -4,7 +4,7 @@ Project Details: Merida Shop
 This makes the website act more as a medium of exchange rather than a store on its own. In order to accommodate this our
 website offers a whole host of features including different types of users. When a user first registers, they are given 
 the option to select whether they are a buyer or a seller. From there, sellers will be given the option to post new 
-products and edit any existing product post that is theirs. Everyone is given the opportunity to buy products. Once 
+products and edit any existing product post that is theirs from the profile page. Everyone is given the opportunity to buy products. Once 
 logged in they are directed to the main homepage which offers the ability to search for products using the search 
 bar and or with the filter drop down menu. From the navigation bar they may also select to view their profile or logout. 
 On the homepage each product is given a small panel from which a user can see an image, name and price of the item and 
@@ -24,8 +24,8 @@ Fasih Ul Islam             B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/
 Dorian Germain Zambo Zambo B00XXXXXX dr704046@dal.ca	URL: https://web.cs.dal.ca/~
 
 Login Information:
-	user@mail.com
-	Post@123
+		user@mail.com
+		Post@123
 
 Citations:
 1. Bootstrap for main layout (header, footer, homepage)
