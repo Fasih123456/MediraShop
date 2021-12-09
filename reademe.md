@@ -24,8 +24,23 @@ Fasih Ul Islam             B00817166 fs272918@dal.ca	URL: https://web.cs.dal.ca/
 Dorian Germain Zambo Zambo B00868016 dr704046@dal.ca	URL: https://web.cs.dal.ca/~
 
 Login Information:
-		user@mail.com
-		Post@123
+	Sellers and Buyers:
+		Username: Abdullah@mail.com
+		Password: Post@123
+
+		Username: Nathaniel@mail.com
+		Password: Post@123
+		
+		Username: Fasih@mail.com
+		Password: Post@123
+
+	Buyers:
+
+		Username: ZhenYu@mail.com
+		Password: Post@123
+
+		Username: Dorian@mail.com
+		Password: Post@123
 
 Citations:
 1. Bootstrap for main layout (header, footer, homepage)
