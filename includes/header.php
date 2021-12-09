@@ -64,12 +64,12 @@ include_once "acesscontrol.php";
                         <li class='nav-item'>
                             
 						<?php 
-                        $value = strpos($_SERVER['REQUEST_URI'],'?') !== false;
+                        $hasQuestionMark = strpos($_SERVER['REQUEST_URI'],'?') !== false;
                         $productView = strpos($_SERVER['REQUEST_URI'],'product.php') !== false;
 
                         $isempty = 1;
 
-                        if(!empty($value)){
+                        if(!empty($hasQuestionMark)){
                             $isempty = 0;
                         }
 
